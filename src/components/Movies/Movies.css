@@ -1,0 +1,21 @@
+.preview {
+    border: 1px solid white;
+    height: 40vh;
+    width: 15vw;
+    padding: 10px;
+    margin: 5px;
+}
+
+.preview-image {
+    height: 33vh;
+}
+
+.catalog {
+    margin-top: 5%;
+    padding: 10px;
+    border: 1px solid black;
+    height: 85vh;
+    width: 85vw;
+    display: flex;
+    flex-flow: row wrap;
+}

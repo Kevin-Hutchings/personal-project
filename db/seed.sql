@@ -27,5 +27,6 @@ CREATE TABLE watchlist(
 CREATE TABLE reviews(
     id SERIAL PRIMARY KEY,
     review VARCHAR(2000),
-    users INT REFERENCES users(id)
+    users INT REFERENCES users(id),
+    user_rating INT
 );

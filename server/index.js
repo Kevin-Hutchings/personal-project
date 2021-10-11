@@ -2,6 +2,7 @@ require('dotenv').config();
 const massive = require('massive');
 const express = require('express');
 const session = require('express-session');
+const { getPreview } = require('./controllers/preview/preview')
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env;
 
@@ -28,5 +29,8 @@ massive({
     console.log(`Connection Successful - Don't forget your towel`)
 })
 .catch(err => console.log(err));
+
+// Movie Endpoints
+app.get('/api/movies/preview', getPreview);
 
 app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));
