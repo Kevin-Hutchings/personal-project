@@ -1,0 +1,15 @@
+nav {
+    border: 1px solid white;
+    /* width: 100vw; */
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-button {
+    height: 50px;
+    width: 100px;
+    background-color: #647687;
+    color: white;
+}

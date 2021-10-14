@@ -1,21 +1,38 @@
 .preview {
     border: 1px solid white;
-    height: 40vh;
+    height: 38vh;
     width: 15vw;
     padding: 10px;
     margin: 5px;
+    text-align: center;
 }
 
 .preview-image {
     height: 33vh;
 }
 
+.catalog-header {
+    border: 1px solid lightblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    width: 82vw;
+    margin: 3vh 1vh 1vh 2vw;
+}
+
 .catalog {
-    margin-top: 5%;
-    padding: 10px;
     border: 1px solid black;
-    height: 85vh;
+    padding: 10px;
     width: 85vw;
     display: flex;
     flex-flow: row wrap;
+}
+
+.catalog-input {
+    border: 1px solid black;
+    display: flex;
+    width: 13vw;
+    justify-content: space-between;
 }
