@@ -5,20 +5,23 @@ import './Movies.css';
 
 const Movies = () => {
     const [preview, setPreview] = useState([]);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
-        axios.get('/api/movies/preview')
+        axios.get('/api/movies')
         .then(({ data }) => setPreview(data))
         .catch(err => console.log(err))
     }, []);
 
-    const previewMap = preview.map((el, index) => {
+    const previewMap = preview
+    .filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
+    .map((movie, index) => {
         return(
-            <div className='preview'>
-                <Link to={`/movie/${el.id}`}>
-                    <img className='preview-image' src={el.img} alt='movie poster' />
+            <div key={index} className='preview'>
+                <Link to={`/movie/${movie.id}`}>
+                    <img className='preview-image' src={movie.img} alt='movie poster' />
                 </Link>
-                <h4 key={index}> {el.title} ({el.release_date}) </h4>
+                <h4> {movie.title} ({movie.release_date}) </h4>
             </div>
         )
     })
@@ -28,7 +31,11 @@ const Movies = () => {
             <header className='catalog-header'>
                 <h1> The Movies of Studio Ghibli</h1>
                 <div className='catalog-input'>
-                    <input />
+                    <input
+                        type='text'
+                        placeholder='Search by Title'
+                        onChange={e => setSearch(e.target.value)}
+                    />
                     <button> A-Z </button>
                 </div>
             </header>

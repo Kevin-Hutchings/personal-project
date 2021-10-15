@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from "react";
-// import React, {Component} from "react";
 import axios from "axios";
 import './Movie.css';
 
@@ -13,15 +12,24 @@ const [movie, setMovie] = useState([]);
     });
 
     return(
-        <div className='movie-container'>
-            <h1> Title: {movie.title} </h1>
-            <img src={movie.img} alt='movie poster' />
-            <p>{movie.synopsis}</p>
-            <ul>
-                <li>Release Date: {movie.release_date}</li>
-                <li>Director: {movie.director}</li>
-                <li>Music: {movie.music}</li>
-            </ul>
+        <div>
+            <h1 className="movie-title"> {movie.title} </h1>
+            <div className='movie-container'>
+                <img 
+                    src={movie.img} 
+                    alt='movie poster'
+                    className='movie-poster' />
+                <div className='movie-info'>
+                    <section>
+                        <h3>Synopsis:</h3> 
+                        {movie.synopsis}
+                    </section>
+                    <h3>Release Date: {movie.release_date}</h3>
+                    <h3>Director: {movie.director}</h3>
+                    <h3>Music: {movie.music}</h3>
+                </div>
+            </div>
+
         </div>
     )
 }

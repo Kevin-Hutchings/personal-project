@@ -16,7 +16,7 @@ app.use(
         saveUninitialized: false,
         secret: SESSION_SECRET,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24 * 30
+            maxAge: 1000 * 60 * 60 * 24
         },
     })
 );
@@ -32,7 +32,7 @@ massive({
 .catch(err => console.log(err));
 
 // Movie Endpoints
-app.get('/api/movies/preview', getPreview);
+app.get('/api/movies/', getPreview);
 app.get('/api/movie/:id', getMovie);
 
 app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));
