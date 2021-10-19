@@ -1,0 +1,40 @@
+form {
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 5vh 35vw;
+  width: 30vw;
+  height: 25vh;
+}
+
+form input {
+  height: 5vh;
+  width: 20vw;
+  text-align: center;
+}
+
+form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22vw;
+}
+
+form button {
+  height: 5vh;
+  width: 10vw;
+}

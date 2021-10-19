@@ -15,16 +15,16 @@ const Nav = () => {
             />
             <div className="buttons">
                 <Link to='/'>
-                    <button className='nav-button'> Home </button>
+                    <button className='button'> Home </button>
                 </Link>
                 <Link to='/movies'>
-                    <button className='nav-button'> Movies </button>
+                    <button className='button'> Movies </button>
                 </Link>
                 <Link to='/history'>
-                    <button className='nav-button'> History </button>
+                    <button className='button'> History </button>
                 </Link>
                 <Link to='/music'>
-                    <button className='nav-button'> Music </button>
+                    <button className='button'> Music </button>
                 </Link>
                 <Link to='/auth'>
                     <img 

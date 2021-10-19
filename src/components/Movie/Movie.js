@@ -18,8 +18,8 @@ const [movie, setMovie] = useState([]);
                 <img 
                     src={movie.img} 
                     alt='movie poster'
-                    className='movie-poster' />
-                <div className='movie-info'>
+                />
+                <div className='info'>
                     <section>
                         <h3>Synopsis:</h3> 
                         {movie.synopsis}

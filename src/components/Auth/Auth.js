@@ -1,12 +1,16 @@
 import React from 'react';
+import './Auth.css'
 
 const Auth = () => {
     return(
         <form>
             <input placeholder='Username' />
-            <input placeholder='password' />
-            <button> Log In</button>
-            <button> Register </button>
+            <input placeholder='Password' />
+
+            <div className='buttons'>
+                <button> Log In</button>
+                <button> Register </button>
+            </div>
         </form>
     )
 }

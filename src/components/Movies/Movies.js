@@ -19,7 +19,7 @@ const Movies = () => {
         return(
             <div key={index} className='preview'>
                 <Link to={`/movie/${movie.id}`}>
-                    <img className='preview-image' src={movie.img} alt='movie poster' />
+                    <img src={movie.img} alt='movie poster' />
                 </Link>
                 <h4> {movie.title} ({movie.release_date}) </h4>
             </div>
@@ -30,7 +30,7 @@ const Movies = () => {
         <div>
             <header className='catalog-header'>
                 <h1> The Movies of Studio Ghibli</h1>
-                <div className='catalog-input'>
+                <div className='input-container'>
                     <input
                         type='text'
                         placeholder='Search by Title'

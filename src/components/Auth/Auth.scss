@@ -1,0 +1,27 @@
+form {
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 5vh 35vw;
+    width: 30vw;
+    height: 25vh;
+
+    input {
+        height: 5vh;
+        width: 20vw;
+        text-align: center;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        width: 22vw;
+    }
+
+    button {
+        height: 5vh;
+        width: 10vw;
+    }
+}

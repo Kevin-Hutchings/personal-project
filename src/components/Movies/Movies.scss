@@ -1,0 +1,50 @@
+.preview {
+    /* border: 1px solid white; */
+    height: 40vh;
+    width: 17vw;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    
+    img {
+        height: 35vh;
+        width: 80%;
+        transition: transform 0.3s;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.catalog-header {
+    /* border: 1px solid lightblue; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    width: 80vw;
+    margin: 2vh 1vh 2vh 1vw;
+    
+    .input-container {
+        /* border: 1px solid black; */
+        display: flex;
+        width: 13vw;
+        justify-content: space-between;
+
+        input {
+            height: 3vh;
+            text-align: center;
+        }
+    }
+}
+
+.catalog {
+    /* border: 1px solid black; */
+    background-color: #00000052;
+    padding: 10px;
+    width: 80vw;
+    display: flex;
+    flex-flow: row wrap;
+}
