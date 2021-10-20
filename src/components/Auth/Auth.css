@@ -1,5 +1,7 @@
 form {
   border: 1px solid white;
+  border-radius: 25px;
+  background-color: #547591a8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,8 +16,9 @@ form {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   margin: 5vh 35vw;
+  padding: 20px;
   width: 30vw;
-  height: 25vh;
+  height: 30vh;
 }
 
 form input {
@@ -37,4 +40,5 @@ form .buttons {
 form button {
   height: 5vh;
   width: 10vw;
+  cursor: pointer;
 }

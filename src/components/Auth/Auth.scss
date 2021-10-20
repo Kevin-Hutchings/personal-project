@@ -1,12 +1,15 @@
 form {
     border: 1px solid white;
+    border-radius: 25px;
+    background-color: #547591a8;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-flow: column nowrap;
     margin: 5vh 35vw;
+    padding: 20px;
     width: 30vw;
-    height: 25vh;
+    height: 30vh;
 
     input {
         height: 5vh;
@@ -23,5 +26,6 @@ form {
     button {
         height: 5vh;
         width: 10vw;
+        cursor: pointer;
     }
 }

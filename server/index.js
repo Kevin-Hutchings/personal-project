@@ -2,8 +2,14 @@ require('dotenv').config();
 const massive = require('massive');
 const express = require('express');
 const session = require('express-session');
-const { getPreview } = require('./controllers/preview/preview');
-const { getMovie } = require('./controllers/movie/movie');
+const { getPreview } = require('./controllers/preview');
+const { getMovie } = require('./controllers/movie');
+const {
+    register,
+    login,
+    logout,
+    getUser
+} = require('./controllers/auth')
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env;
 
@@ -34,5 +40,11 @@ massive({
 // Movie Endpoints
 app.get('/api/movies/', getPreview);
 app.get('/api/movie/:id', getMovie);
+
+// User Auth Endpoints
+app.post('/api/auth/register', register);
+app.post('/api/auth/login', login);
+app.get('/api/auth/me', getUser);
+app.post('/api/auth/logout', logout);
 
 app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));
