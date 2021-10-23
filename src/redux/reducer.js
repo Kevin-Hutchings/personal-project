@@ -1,37 +1,49 @@
 const initialState = {
     username: '',
     email: '',
-}
+    password: '',
+    isLoggedIn: false,
+};
 
-const UPDATE_USER = 'UPDATE_USER';
+const FIELD = 'field';
+const REGISTER = 'REGISTER';
+const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
 
-export const updateUser = (user) => {
-    return {
-        type: UPDATE_USER,
-        payload: user,
-    }
-}
-
-export const logout = () => {
-    return { 
-        type: LOGOUT,
-    }
-}
-
-export default function reducer(state = initialState, action) {
+function authReducer(state = initialState, action) {
     switch(action.type) {
-        case UPDATE_USER:
+        case FIELD: {
             return {
                 ...state,
-                username: action.payload.username,
-                email: action.payload.email,
+                [action.fieldName]: action.payload,
             }
-        case LOGOUT: 
+        };
+        case REGISTER: {
+            const { data } = action.payload;
             return {
-                username: '',
-                email: '',
+                ...state,
+                username: data.username,
+                email: data.email,
+                password: data.password,
             }
+        }
+        case LOGIN: {
+            const { data } = action.payload;
+            return {
+                ...state,
+                username: data.username,
+                password: data.password,
+                isLoggedIn: true,
+            }
+        };
+        case LOGOUT: {
+            return {
+                ...state,
+                isLoggedIn: false,
+            }
+        };
         default: return state;
     }
 }
+
+export default authReducer;
