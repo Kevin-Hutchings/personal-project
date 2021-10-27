@@ -1,24 +1,33 @@
-const initialState = {
+export const initialState = {
     username: '',
     email: '',
     password: '',
-    isLoggedIn: false,
 };
 
-const FIELD = 'field';
-const REGISTER = 'REGISTER';
-const LOGIN = 'LOGIN';
-const LOGOUT = 'LOGOUT';
+export const ACTIONS = {
+    FIELD: 'field',
+    REGISTER: 'REGISTER',
+    LOGIN: 'LOGIN',
+    GET_USER: 'GET_USER',
+    LOGOUT: 'LOGOUT',
+}
 
-function authReducer(state = initialState, action) {
+export const getUser = (payload) => {
+    return {
+        type: ACTIONS.GET_USER,
+        payload,
+    }
+}
+
+const authReducer = (state = initialState, action) => {
     switch(action.type) {
-        case FIELD: {
+        case ACTIONS.FIELD: {
             return {
                 ...state,
                 [action.fieldName]: action.payload,
             }
         };
-        case REGISTER: {
+        case ACTIONS.REGISTER: {
             const { data } = action.payload;
             return {
                 ...state,
@@ -27,19 +36,24 @@ function authReducer(state = initialState, action) {
                 password: data.password,
             }
         }
-        case LOGIN: {
+        case ACTIONS.LOGIN: {
             const { data } = action.payload;
             return {
                 ...state,
                 username: data.username,
                 password: data.password,
-                isLoggedIn: true,
             }
         };
-        case LOGOUT: {
+        case ACTIONS.GET_USER: {
+            const { data } = action.payload;
             return {
                 ...state,
-                isLoggedIn: false,
+                username: data.username,
+            }
+        }
+        case ACTIONS.LOGOUT: {
+            return {
+                ...initialState,
             }
         };
         default: return state;
