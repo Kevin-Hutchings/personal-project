@@ -1,5 +1,4 @@
 .preview {
-  /* border: 1px solid white; */
   height: 40vh;
   width: 17vw;
   padding: 10px;
@@ -19,6 +18,15 @@
 .preview img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.preview h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .catalog-header {

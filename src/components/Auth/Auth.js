@@ -20,7 +20,6 @@ const Auth = () => {
         password,
       });
       dispatch({ type: ACTIONS.REGISTER, payload: { data: req.data } });
-      // history.push('/auth');
     } catch (err) {
       console.log(err);
     }
@@ -30,7 +29,7 @@ const Auth = () => {
     try {
       const req = await axios.post("/api/auth/login", { username, password });
       dispatch({ type: ACTIONS.LOGIN, payload: { data: req.data } });
-      history.push('/')
+      history.push("/movies");
       axios
         .get("/api/auth/me")
         .then(({ data }) => setUser(data))
@@ -52,7 +51,7 @@ const Auth = () => {
 
   return (
     <div>
-      {user.username ? (
+      {user.id ? (
         <div>
           <h1> Welcome {user.username}! </h1>
           <button onClick={logout}> Logout</button>

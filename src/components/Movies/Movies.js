@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { UserContext } from './../../context/context';
 import './Movies.css';
 
 const Movies = () => {
     const [preview, setPreview] = useState([]);
     const [search, setSearch] = useState('');
+    const { user } = useContext(UserContext);
 
     useEffect(() => {
         axios.get('/api/movies')
@@ -21,7 +23,11 @@ const Movies = () => {
                 <Link to={`/movie/${movie.id}`}>
                     <img src={movie.img} alt='movie poster' />
                 </Link>
-                <h4> {movie.title} ({movie.release_date}) </h4>
+                <h4> {movie.title} ({movie.release_date})
+                {user.id ? (
+                    <button> + </button>
+                ) : ''}
+                </h4>
             </div>
         )
     })
