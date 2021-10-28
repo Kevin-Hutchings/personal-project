@@ -9,7 +9,7 @@ import './Nav.css';
 
 const Nav = () => {
     const {user}  = useContext(UserContext);
-    // console.log(user);
+    
     return(
         <nav>
             <img 
@@ -19,16 +19,16 @@ const Nav = () => {
             />
             <div className="buttons">
                 <Link to='/home'>
-                    <button className='button'> Home </button>
+                    <button> Home </button>
                 </Link>
                 <Link to='/movies'>
-                    <button className='button'> Movies </button>
+                    <button> Movies </button>
                 </Link>
                 <Link to='/history'>
-                    <button className='button'> History </button>
+                    <button> History </button>
                 </Link>
                 <Link to='/music'>
-                    <button className='button'> Music </button>
+                    <button> Music </button>
                 </Link>
                 <Link to='/'>
                     <img 
@@ -38,7 +38,7 @@ const Nav = () => {
                         />
                 </Link>
                 {!user.id ? ( 
-                    <h1>please log in</h1>
+                    <h1> please log in </h1>
                     ) : (<h1> Name: {user.username} Id: {user.id} </h1>
                 )}
             </div>

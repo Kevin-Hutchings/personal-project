@@ -29,6 +29,10 @@
           justify-content: space-evenly;
 }
 
+.preview button {
+  cursor: pointer;
+}
+
 .catalog-header {
   /* border: 1px solid lightblue; */
   display: -webkit-box;

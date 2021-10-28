@@ -7,6 +7,7 @@ import Movies from "./components/Movies/Movies";
 import Movie from "./components/Movie/Movie";
 import History from "./components/History/History";
 import Auth from "./components/Auth/Auth";
+import Watchlist from "./components/Watchlist/Watchlist";
 
 export default(
     <Switch>
@@ -15,5 +16,6 @@ export default(
         <Route component={Movies} path='/movies' />
         <Route component={Movie} path='/movie/:id' />
         <Route component={History} path='/history' />
+        <Route component={Watchlist} path='/watchlist' />
     </Switch>
 );

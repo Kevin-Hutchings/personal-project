@@ -20,12 +20,35 @@ form {
     .buttons{
         display: flex;
         align-items: center;
-        width: 22vw;
+        width: 23vw;
+        justify-content: space-evenly;
     }
 
     button {
         height: 5vh;
-        width: 10vw;
+        width: 6vw;
         cursor: pointer;
+    }
+
+    button:active {
+        background-color: #547591a8;
+    }
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2vw;
+
+    button {
+        height: 5vh;
+        width: 6vw;
+        cursor: pointer;
+    }
+
+    button:active {
+        background-color: #547591a8;
     }
 }

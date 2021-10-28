@@ -65,5 +65,5 @@ module.exports = {
     register,
     login,
     logout,
-    getUser
+    getUser,
 }

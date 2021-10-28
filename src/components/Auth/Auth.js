@@ -29,11 +29,8 @@ const Auth = () => {
     try {
       const req = await axios.post("/api/auth/login", { username, password });
       dispatch({ type: ACTIONS.LOGIN, payload: { data: req.data } });
+      setUser(req.data);
       history.push("/movies");
-      axios
-        .get("/api/auth/me")
-        .then(({ data }) => setUser(data))
-        .catch((err) => console.log(err));
     } catch (err) {
       console.log(err);
     }
@@ -43,7 +40,7 @@ const Auth = () => {
     axios
       .post("/api/auth/logout")
       .then(() => {
-        dispatch({ type: ACTIONS.LOGOUT });
+        // dispatch({ type: ACTIONS.LOGOUT });
         setUser({});
       })
       .catch((err) => console.log(err));
@@ -52,7 +49,7 @@ const Auth = () => {
   return (
     <div>
       {user.id ? (
-        <div>
+        <div className='welcome'>
           <h1> Welcome {user.username}! </h1>
           <button onClick={logout}> Logout</button>
         </div>
@@ -60,7 +57,7 @@ const Auth = () => {
         <form>
           <input
             type="text"
-            placeholder="username"
+            placeholder="Username"
             value={username}
             onChange={(e) =>
               dispatch({
@@ -71,7 +68,7 @@ const Auth = () => {
             }
           />
           <input
-            placeholder="Email"
+            placeholder="Email (Not Required)"
             type="email"
             value={email}
             onChange={(e) =>
