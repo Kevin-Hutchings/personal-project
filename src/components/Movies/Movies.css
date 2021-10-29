@@ -33,6 +33,10 @@
   cursor: pointer;
 }
 
+.preview button:active {
+  background-color: #547591a8;
+}
+
 .catalog-header {
   /* border: 1px solid lightblue; */
   display: -webkit-box;

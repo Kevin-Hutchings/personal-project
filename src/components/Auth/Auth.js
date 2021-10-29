@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import authReducer, { initialState, ACTIONS } from "../../redux/reducer";
+import authReducer, { initialState, ACTIONS } from "../../redux/authReducer";
 import { useUserContext } from "./../../context/context";
 import "./Auth.css";
 
@@ -46,7 +46,7 @@ const Auth = () => {
       .catch((err) => console.log(err));
   };
 
-  return (
+  return(
     <div>
       {user.id ? (
         <div className='welcome'>

@@ -22,7 +22,7 @@ app.use(
         saveUninitialized: false,
         secret: SESSION_SECRET,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24 * 30
+            maxAge: 1000 * 60 * 60 * 24 * 5
         },
     })
 );

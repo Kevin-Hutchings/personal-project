@@ -39,7 +39,8 @@ const Nav = () => {
                 </Link>
                 {!user.id ? ( 
                     <h1> please log in </h1>
-                    ) : (<h1> Name: {user.username} Id: {user.id} </h1>
+                    ) : (
+                    <h2> Name: {user.username} Id: {user.id} </h2>
                 )}
             </div>
         </nav>

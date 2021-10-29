@@ -2,12 +2,15 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { UserContext } from './../../context/context';
+import { useDispatch } from 'react-redux';
+import { addTitle } from '../../redux/reducer';
 import './Movies.css';
 
 const Movies = () => {
+    const { user } = useContext(UserContext);
     const [preview, setPreview] = useState([]);
     const [search, setSearch] = useState('');
-    const { user } = useContext(UserContext);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         axios.get('/api/movies')
@@ -15,6 +18,10 @@ const Movies = () => {
         .catch(err => console.log(err))
     }, []);
 
+    const handleAddTitle = (val) => {
+        dispatch(addTitle(val))
+    }
+    
     const previewMap = preview
     .filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
     .map((movie, index) => {
@@ -25,7 +32,7 @@ const Movies = () => {
                 </Link>
                 <h4> {movie.title} ({movie.release_date})
                 {user.id ? (
-                    <button> + </button>
+                    <button onClick={handleAddTitle(movie.title)}> + </button>
                 ) : ''}
                 </h4>
             </div>

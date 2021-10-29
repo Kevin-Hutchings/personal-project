@@ -1,63 +1,36 @@
-export const initialState = {
-    username: '',
-    email: '',
-    password: '',
-};
-
-export const ACTIONS = {
-    FIELD: 'field',
-    REGISTER: 'REGISTER',
-    LOGIN: 'LOGIN',
-    GET_USER: 'GET_USER',
-    LOGOUT: 'LOGOUT',
+const initialState = {
+    title: '',
+    isWatched: false,
 }
 
-export const getUser = (payload) => {
+const ADD_TITLE = 'ADD_TITLE';
+const DELETE_TITLE = 'DELETE_TITLE';
+
+export const addTitle = (title) => {
     return {
-        type: ACTIONS.GET_USER,
-        payload,
+        type: ADD_TITLE,
+        payload: title,
     }
 }
 
-const authReducer = (state = initialState, action) => {
+export const deleteTitle = () => {
+    return {
+        type: DELETE_TITLE,
+    }
+}
+
+export default function reducer(state = initialState, action) {
     switch(action.type) {
-        case ACTIONS.FIELD: {
+        case ADD_TITLE:
             return {
                 ...state,
-                [action.fieldName]: action.payload,
+                title: action.payload.title,
             }
-        };
-        case ACTIONS.REGISTER: {
-            const { data } = action.payload;
+        case DELETE_TITLE:
             return {
-                ...state,
-                username: data.username,
-                email: data.email,
-                password: data.password,
+                title: '',
+                isWatched: false,
             }
-        }
-        case ACTIONS.LOGIN: {
-            const { data } = action.payload;
-            return {
-                ...state,
-                username: data.username,
-                password: data.password,
-            }
-        };
-        case ACTIONS.GET_USER: {
-            const { data } = action.payload;
-            return {
-                ...state,
-                username: data.username,
-            }
-        }
-        case ACTIONS.LOGOUT: {
-            return {
-                ...initialState,
-            }
-        };
         default: return state;
     }
 }
-
-export default authReducer;
