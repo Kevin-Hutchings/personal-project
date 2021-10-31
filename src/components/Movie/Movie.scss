@@ -11,11 +11,13 @@
     display: flex;
     flex-flow: row nowrap;
 
-    .info {
+    .movie-info {
         border: 1px solid white;
         background-color: #00000052;
         padding: 20px;
         width: 75vw;
+        display: flex;
+        flex-direction: column;
     }
     
     img {

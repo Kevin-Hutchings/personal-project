@@ -21,11 +21,18 @@
           flex-flow: row nowrap;
 }
 
-.movie-container .info {
+.movie-container .movie-info {
   border: 1px solid white;
   background-color: #00000052;
   padding: 20px;
   width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .movie-container img {

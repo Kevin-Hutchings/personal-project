@@ -19,19 +19,24 @@ const Movies = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const addToList = (title, userId) => {
-    axios.post(`/api/watchlist/add/${user.id}`, {title, userId})
-    .then(({ data }) => {
-      dispatch({
-        type: ACTIONS.ADD_TITLE,
-        payload: data,
+  const addToList = (title, userId, movieId) => {
+    axios
+      .post(`/api/watchlist/add/${user.id}`, { title, userId, movieId })
+      .then(({ data }) => {
+        dispatch({
+          type: ACTIONS.ADD_TITLE,
+          payload: data,
+        });
       })
-    }).catch((e) => console.log(e))
-  }
-  
+      .catch((e) => alert("Movie already in list!"));
+  };
 
   const previewMap = preview
-    .filter((el) => el.title.toLowerCase().includes(search.toLowerCase()))
+    .filter(
+      (movie) =>
+        movie.title.toLowerCase().includes(search.toLowerCase()) ||
+        movie.director.toLowerCase().includes(search.toLowerCase())
+    )
     .map((movie, index) => {
       return (
         <div key={index} className="preview">
@@ -41,8 +46,15 @@ const Movies = () => {
           <h4>
             {movie.title} ({movie.release_date})
             {user.id ? (
-              <button onClick={() => addToList([movie.title, user.id])}> + </button>
-            ) : ''}
+              <button
+                onClick={() => addToList([movie.title, user.id, movie.id])}
+              >
+                {" "}
+                +{" "}
+              </button>
+            ) : (
+              ""
+            )}
           </h4>
         </div>
       );

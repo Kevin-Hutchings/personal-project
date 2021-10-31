@@ -4,8 +4,7 @@ const express = require('express');
 const session = require('express-session');
 
 // Controllers
-const { getPreview } = require('./controllers/preview');
-const { getMovie } = require('./controllers/movie');
+const { getMovie, getPreview } = require('./controllers/movie');
 const {
     register,
     login,
@@ -29,7 +28,7 @@ app.use(
         saveUninitialized: false,
         secret: SESSION_SECRET,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24
+            maxAge: 1000 * 60 * 60 * 24  
         },
     })
 );

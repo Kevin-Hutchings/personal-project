@@ -1,4 +1,4 @@
 INSERT INTO watchlist
-(title, users)
+(title, users, movie)
 VALUES
-($1, $2);
+($1, $2, $3);

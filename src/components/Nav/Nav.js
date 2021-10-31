@@ -29,14 +29,16 @@ const Nav = () => {
         <Link to="/">
           <img className="user-icon" src={userLogo} alt="user-logo" />
         </Link>
-        {!user.id ? (
-          <h1> please log in </h1>
-        ) : (
-          <h2>
-            {" "}
-            Name: {user.username} Id: {user.id}{" "}
-          </h2>
-        )}
+        <div className='user-info'>
+          {!user.id ? (
+            <h1> log in </h1>
+          ) : (
+            <h2>
+              {" "}
+              Name: {user.username} Id: {user.id}{" "}
+            </h2>
+          )}
+        </div>
       </div>
     </nav>
   );

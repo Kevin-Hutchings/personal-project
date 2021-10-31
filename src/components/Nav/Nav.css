@@ -53,3 +53,8 @@ nav button:active {
   right: 2%;
   margin-top: 1vh;
 }
+
+.user-info {
+  position: absolute;
+  right: 6%;
+}
