@@ -1,15 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/context";
 import { useSelector, useDispatch } from "react-redux";
-import { ACTIONS } from "../../redux/reducer";
+import { ACTIONS } from "../../redux/listReducer";
 import axios from "axios";
 import "./Watchlist.css";
 
 const Watchlist = () => {
   const { user } = useContext(UserContext);
-  const list = useSelector((state) => state.title);
+  const list = useSelector(state => state.list.title);
   const dispatch = useDispatch();
-  // console.log(list)
 
   useEffect(() => {
     axios
@@ -28,7 +27,7 @@ const Watchlist = () => {
       axios.delete(`/api/watchlist/delete/${id}/${title}`);
       dispatch({
         type: ACTIONS.DELETE_TITLE,
-      })
+      });
     } catch (e) {
       console.log(e);
     }
@@ -36,23 +35,19 @@ const Watchlist = () => {
 
   const listMap = list.map((el, index) => {
     return (
-      <ol className="list-info">
+      <ul className="list-info">
         <li key={index}> {el.title} </li>
         <button onClick={() => removeTitle(user.id, el.title)}> - </button>
-      </ol>
+      </ul>
     );
   });
 
   return (
     <div className="watchlist">
-      {user.id ? (
-        <div>
-          <h2> Watchlist: logged in </h2>
-          <div> {listMap} </div>
-        </div>
-      ) : (
-        <h2> Watchlist: not logged in </h2>
-      )}
+      <div>
+        <h2>Watchlist:</h2>
+        <div>{listMap}</div>
+      </div>
     </div>
   );
 };

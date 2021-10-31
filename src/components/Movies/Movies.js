@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
 import { useDispatch } from "react-redux";
-import { ACTIONS } from "../../redux/reducer";
+import { ACTIONS } from "../../redux/listReducer";
 import "./Movies.css";
 
 const Movies = () => {
@@ -49,12 +49,9 @@ const Movies = () => {
               <button
                 onClick={() => addToList([movie.title, user.id, movie.id])}
               >
-                {" "}
-                +{" "}
+                +
               </button>
-            ) : (
-              ""
-            )}
+            ) : null}
           </h4>
         </div>
       );

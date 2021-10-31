@@ -20,6 +20,7 @@ const Auth = () => {
         password,
       });
       dispatch({ type: ACTIONS.REGISTER, payload: { data: req.data } });
+      history.push('/home')
     } catch (err) {
       console.log(err);
     }
@@ -54,7 +55,7 @@ const Auth = () => {
           <button onClick={logout}> Logout</button>
         </div>
       ) : (
-        <form>
+        <form className='auth-form'>
           <input
             type="text"
             placeholder="Username"

@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { UserContext } from "../../context/context";
 import axios from "axios";
+import Review from "../Review/Review";
 import "./Movie.css";
 
 const Movie = (props) => {
   const [movie, setMovie] = useState([]);
+  const { user } = useContext(UserContext);
 
   useEffect(() => {
     axios
@@ -15,7 +18,7 @@ const Movie = (props) => {
   return (
     <div>
       <h1 className="movie-title"> {movie.title} </h1>
-      <div className="movie-container">
+      <section className="movie-container">
         <img src={movie.img} alt="movie poster" />
         <div className="movie-info">
           <section>
@@ -33,8 +36,15 @@ const Movie = (props) => {
           <h3>
             <u>Music:</u> {movie.music}
           </h3>
+          <div className='review-section'>
+            {user.id ? (
+              <Review />
+            ) : (
+              <h2>Log in to leave a personal review / rating!</h2>
+            )}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

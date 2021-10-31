@@ -1,4 +1,4 @@
-form {
+.auth-form {
   border: 1px solid white;
   border-radius: 25px;
   background-color: #547591a8;
@@ -21,13 +21,13 @@ form {
   height: 30vh;
 }
 
-form input {
+.auth-form input {
   height: 5vh;
   width: 20vw;
   text-align: center;
 }
 
-form .buttons {
+.auth-form .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,13 +40,13 @@ form .buttons {
           justify-content: space-evenly;
 }
 
-form button {
+.auth-form button {
   height: 5vh;
   width: 6vw;
   cursor: pointer;
 }
 
-form button:active {
+.auth-form button:active {
   background-color: #547591a8;
 }
 

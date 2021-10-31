@@ -1,0 +1,12 @@
+.review {
+    padding: 10px;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    input {
+        height: 20vh;
+        width: 30vw;
+    }
+}

@@ -16,6 +16,11 @@ const {
     removeTitle,
     getList,
 } = require('./controllers/watchlist');
+const {
+    createReview,
+    getReview,
+    deleteReview,
+} = require('./controllers/review');
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env;
 
@@ -57,5 +62,10 @@ app.post('/api/auth/logout', logout);
 app.get('/api/watchlist/:id', getList);
 app.post('/api/watchlist/add/:id', addTitle);
 app.delete('/api/watchlist/delete/:id/:title', removeTitle);
+
+// Review Endpoints
+app.get('/api/review/:id', getReview);
+app.post('/api/review/:id', createReview);
+app.delete('/api/review/:id', deleteReview);
 
 app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));

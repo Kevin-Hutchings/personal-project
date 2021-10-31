@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
-import UserProvider from './context/context'
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk'
+import UserProvider from './context/context'
 import { createStore, applyMiddleware } from 'redux'
-import reducer from './redux/reducer';
+import thunk from 'redux-thunk'
+// import listReducer from './redux/listReducer';
+import reducer from './redux/index';
+import './index.css';
 
 const store = createStore(reducer, applyMiddleware(thunk))
 

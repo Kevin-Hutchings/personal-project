@@ -9,7 +9,7 @@ const register = async (req, res) => {
   try {
     if (existingUser) {
       res.status(409).json("User already exists");
-    } else {
+    } else if(username !== '' && password !== ''){
       const hash = bcrypt.hashSync(password, 10);
       const registeredUser = await db.user.create_user([username, email, hash]);
       const user = registeredUser[0];
