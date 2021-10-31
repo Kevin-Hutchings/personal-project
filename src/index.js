@@ -6,7 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 import UserProvider from './context/context'
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
+import reducer from './redux/reducer';
+
+const store = createStore(reducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

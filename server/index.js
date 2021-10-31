@@ -2,6 +2,8 @@ require('dotenv').config();
 const massive = require('massive');
 const express = require('express');
 const session = require('express-session');
+
+// Controllers
 const { getPreview } = require('./controllers/preview');
 const { getMovie } = require('./controllers/movie');
 const {
@@ -10,6 +12,11 @@ const {
     logout,
     getUser
 } = require('./controllers/auth')
+const { 
+    addTitle,
+    removeTitle,
+    getList,
+} = require('./controllers/watchlist');
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env;
 
@@ -22,7 +29,7 @@ app.use(
         saveUninitialized: false,
         secret: SESSION_SECRET,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24 * 5
+            maxAge: 1000 * 60 * 60 * 24
         },
     })
 );
@@ -46,5 +53,10 @@ app.post('/api/auth/register', register);
 app.post('/api/auth/login', login);
 app.get('/api/auth/me', getUser);
 app.post('/api/auth/logout', logout);
+
+// Watchlist Endpoints
+app.get('/api/watchlist/:id', getList);
+app.post('/api/watchlist/add/:id', addTitle);
+app.delete('/api/watchlist/delete/:id/:title', removeTitle);
 
 app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));

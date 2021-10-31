@@ -46,10 +46,10 @@ const Auth = () => {
       .catch((err) => console.log(err));
   };
 
-  return(
+  return (
     <div>
       {user.id ? (
-        <div className='welcome'>
+        <div className="welcome">
           <h1> Welcome {user.username}! </h1>
           <button onClick={logout}> Logout</button>
         </div>
