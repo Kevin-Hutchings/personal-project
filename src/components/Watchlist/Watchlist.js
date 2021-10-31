@@ -3,7 +3,6 @@ import { UserContext } from '../../context/context';
 import { useSelector, useDispatch } from 'react-redux';
 import { ACTIONS } from '../../redux/reducer';
 import axios from 'axios';
-// import { deleteTitle } from '../../redux/reducer';
 import './Watchlist.css';
 
 const Watchlist = () => {
@@ -21,24 +20,28 @@ const Watchlist = () => {
             })
         })
         .catch(err => console.log(err))
-    }, [user.id, dispatch]);
+    });
 
-    const removeTitle = async (id, title) => {
+    const removeTitle = (id, title) => {
         try{
-            await axios.delete(`/api/watchlist/delete/${id}/${title}`)
-            .then((res) => {
-                dispatch({
-                    type: ACTIONS.DELETE_TITLE,
-                    payload: res.data
-                })
+            axios.delete(`/api/watchlist/delete/${id}/${title}`)
+            dispatch({
+                type: ACTIONS.DELETE_TITLE
             })
+            // axios.delete(`/api/watchlist/delete/${id}/${title}`)
+            // .then((res) => {
+            //     dispatch({
+            //         type: ACTIONS.DELETE_TITLE,
+            //         payload: res.data
+            //     })
+            // })
         } catch (e) { console.log(e) }
     }
-
+    // const newList = [...list];
     const listMap = list.map((el, index) => {
         return (
             <div className='info'>
-                <h3 key={index}> {el.title} </h3>
+                <h3 key={index}> {index}: {el.title} </h3>
                 <button onClick={() => removeTitle(user.id, el.title)}> - </button>
             </div>
         )

@@ -3,8 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
 import { useDispatch } from "react-redux";
-import "./Movies.css";
 import { ACTIONS } from "../../redux/reducer";
+import "./Movies.css";
 
 const Movies = () => {
   const { user } = useContext(UserContext);
@@ -20,14 +20,15 @@ const Movies = () => {
   }, []);
 
   const addToList = (title, userId) => {
-    try{
-      const req = axios.post(`/api/watchlist/add/${user.id}`, {title, userId})
+    axios.post(`/api/watchlist/add/${user.id}`, {title, userId})
+    .then(({ data }) => {
       dispatch({
         type: ACTIONS.ADD_TITLE,
-        payload: req.data,
+        payload: data,
       })
-    } catch (e) { console.log(e) }
+    }).catch((e) => console.log(e))
   }
+  
 
   const previewMap = preview
     .filter((el) => el.title.toLowerCase().includes(search.toLowerCase()))
