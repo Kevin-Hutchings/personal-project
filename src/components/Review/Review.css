@@ -11,9 +11,12 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.review input {
-  height: 20vh;
-  width: 30vw;
+.review button {
+  width: 5vw;
+  height: 3vh;
 }

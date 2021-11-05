@@ -12,12 +12,6 @@
 //     const [password, setPassword] = useState('');
 //     const user = {username, email, password};
     
-//     const initialState = {
-//         username: '',
-//         email: '',
-//         password: '',
-//     };
-    
 //     const [state, dispatch] = useReducer(authReducer, initialState);
 //     let history = useHistory();
 

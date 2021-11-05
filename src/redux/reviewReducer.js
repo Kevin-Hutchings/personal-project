@@ -10,15 +10,16 @@ export const ACTIONS = {
 
 export default function reviewReducer(state = initialState, action) {
   switch (action.type) {
-    case ACTIONS.CREATE_REVIEW:
+    case ACTIONS.CREATE_REVIEW: {
       return {
         ...state,
         review: action.payload,
       };
+    }
     case ACTIONS.GET_REVIEW:
       return {
         ...state,
-        review: action.payload,
+        review: action.payload
       };
     case ACTIONS.DELETE_REVIEW:
       return {

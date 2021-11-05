@@ -1,4 +1,4 @@
 INSERT INTO reviews
-(review, users)
+(review, movie, users)
 VALUES
-($1, $2);
+($1, $2, $3);

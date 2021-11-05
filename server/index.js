@@ -64,8 +64,8 @@ app.post('/api/watchlist/add/:id', addTitle);
 app.delete('/api/watchlist/delete/:id/:title', removeTitle);
 
 // Review Endpoints
-app.get('/api/review/:id', getReview);
-app.post('/api/review/:id', createReview);
-app.delete('/api/review/:id', deleteReview);
+app.get('/api/review/:id/:userid', getReview);
+app.post('/api/review/add/:id', createReview);
+app.delete('/api/review/:id/:userid', deleteReview);
 
 app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));

@@ -1,25 +1,25 @@
-const createReview = () => {
+const createReview = (req, res) => {
     const { id } = req.params;
-    const { review } = req.body;
+    const { review , userid } = req.body;
     const db = req.app.get('db');
 
-    db.review.create_review([review, id])
+    db.review.create_review(review, id, userid)
     .then((data) => res.status(200).send(data))
     .catch(err => res.status(404).send(err));
 }
 
-const getReview = () => {
-    const { id } = req.params;
+const getReview = (req, res) => {
+    const { id, userid } = req.params;
     const db = req.app.get('db');
-    db.review.get_review([id])
+    db.review.get_review(id, userid)
     .then((data) => res.status(200).send(data))
     .catch(err => res.status(404).send(err))
 }
 
-const deleteReview = () => {
-    const { id } = req.params;
+const deleteReview = (req, res) => {
+    const { id, userid } = req.params;
     const db = req.app.get('db');
-    db.review.delete_review([id])
+    db.review.delete_review(id, userid)
     .then(() => res.sendStatus(200))
     .catch((err) => res.status(404).send(err));
 }

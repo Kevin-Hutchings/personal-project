@@ -13,7 +13,7 @@ const Movie = (props) => {
       .get(`/api/movie/${props.match.params.id}`)
       .then(({ data }) => setMovie(...data))
       .catch((err) => console.log(err));
-  });
+  }, [props.match.params.id]);
 
   return (
     <div>
@@ -38,7 +38,7 @@ const Movie = (props) => {
           </h3>
           <div className='review-section'>
             {user.id ? (
-              <Review />
+              <Review id={props.match.params.id}/>
             ) : (
               <h2>Log in to leave a personal review / rating!</h2>
             )}

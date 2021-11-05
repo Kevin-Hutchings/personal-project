@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect} from "react";
 import { UserContext } from "../../context/context";
 import { useSelector, useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
@@ -11,16 +11,16 @@ const Watchlist = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get(`/api/watchlist/${user.id}`)
-      .then((res) => {
-        dispatch({
-          type: ACTIONS.GET_LIST,
-          payload: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  });
+      axios
+        .get(`/api/watchlist/${user.id}`)
+        .then((res) => {
+          dispatch({
+            type: ACTIONS.GET_LIST,
+            payload: res.data,
+          })
+        })
+        .catch((err) => console.log(err));
+  }, [dispatch, user.id]);
 
   const removeTitle = (id, title) => {
     try {
@@ -41,6 +41,7 @@ const Watchlist = () => {
       </ul>
     );
   });
+
 
   return (
     <div className="watchlist">

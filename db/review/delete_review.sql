@@ -1,2 +1,2 @@
 DELETE FROM review
-WHERE user = $1 AND id = $2;
+WHERE id = $1 AND user = $2;

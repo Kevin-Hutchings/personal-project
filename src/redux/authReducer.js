@@ -21,12 +21,11 @@ export const getUser = (payload) => {
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ACTIONS.FIELD: {
+    case ACTIONS.FIELD:
       return {
         ...state,
         [action.fieldName]: action.payload,
       };
-    }
     case ACTIONS.REGISTER: {
       const { data } = action.payload;
       return {
@@ -51,11 +50,10 @@ const authReducer = (state = initialState, action) => {
         username: data.username,
       };
     }
-    case ACTIONS.LOGOUT: {
+    case ACTIONS.LOGOUT:
       return {
         ...initialState,
       };
-    }
     default:
       return state;
   }

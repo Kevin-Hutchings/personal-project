@@ -2,7 +2,7 @@ CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     email VARCHAR(100) NOT NULL,
     password VARCHAR(200) NOT NULL,
-    username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE movies(
@@ -28,6 +28,7 @@ CREATE TABLE watchlist(
 CREATE TABLE reviews(
     id SERIAL PRIMARY KEY,
     review VARCHAR(2000),
+    user_rating INT,
     users INT REFERENCES users(id),
-    user_rating INT
+    movie INT REFERENCES movies(id)
 );

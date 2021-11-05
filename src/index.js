@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import UserProvider from './context/context'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-// import listReducer from './redux/listReducer';
 import reducer from './redux/index';
 import './index.css';
 

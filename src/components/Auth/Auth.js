@@ -26,12 +26,13 @@ const Auth = () => {
     }
   };
 
-  const login = async () => {
+  const login = async (e) => {
     try {
+      e.preventDefault();
       const req = await axios.post("/api/auth/login", { username, password });
       dispatch({ type: ACTIONS.LOGIN, payload: { data: req.data } });
       setUser(req.data);
-      history.push("/movies");
+      history.push('/movies');
     } catch (err) {
       console.log(err);
     }
