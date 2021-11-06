@@ -9,6 +9,7 @@ import "./Watchlist.css";
 const Watchlist = () => {
   const { user } = useContext(UserContext);
   const list = useSelector((state) => state.list.title);
+  const toggle = useSelector((state) => state.list.toggle);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -46,11 +47,15 @@ const Watchlist = () => {
   });
 
   return (
-    <div className="watchlist">
-      <div>
-        <h2>Watchlist:</h2>
-        <div>{listMap}</div>
-      </div>
+    <div>
+      {toggle ? (
+        <div className="watchlist">
+          <div>
+            <h2>Watchlist:</h2>
+            <div>{listMap}</div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

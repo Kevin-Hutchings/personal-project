@@ -7,6 +7,10 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -27,6 +31,30 @@ nav button {
 
 nav button:active {
   background-color: #547591a8;
+}
+
+.user-info {
+  position: absolute;
+  right: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 17vw;
+}
+
+.user-info .list-toggle {
+  height: 3vh;
+  width: 5vw;
+  font-size: 0.75em;
 }
 
 .studio-logo {
@@ -52,9 +80,4 @@ nav button:active {
   position: absolute;
   right: 2%;
   margin-top: 1vh;
-}
-
-.user-info {
-  position: absolute;
-  right: 6%;
 }

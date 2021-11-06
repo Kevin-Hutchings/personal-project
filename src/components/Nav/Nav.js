@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { UserContext } from "./../../context/context";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { ACTIONS } from "../../redux/listReducer";
 
 //styling
 import userLogo from "./../../images/user-logo.png";
@@ -9,6 +11,13 @@ import "./Nav.css";
 
 const Nav = () => {
   const { user } = useContext(UserContext);
+  const dispatch = useDispatch();
+
+  const handleToggle = () => {
+    dispatch({
+      type: ACTIONS.TOGGLE,
+    });
+  };
 
   return (
     <nav>
@@ -29,13 +38,16 @@ const Nav = () => {
         <Link to="/">
           <img className="user-icon" src={userLogo} alt="user-logo" />
         </Link>
-        <div className="user-info">
+        <div>
           {!user.id ? (
             <h1>log in</h1>
           ) : (
-            <h2>
-              Name: {user.username} ID: {user.id}
-            </h2>
+            <div className="user-info">
+              <h2>Welcome, {user.username}!</h2>
+              <button className="list-toggle" onClick={handleToggle}>
+                Watchlist
+              </button>
+            </div>
           )}
         </div>
       </div>
