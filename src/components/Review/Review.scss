@@ -1,4 +1,4 @@
-.review {
+.review-form {
     padding: 10px;
     height: 25vh;
     display: flex;
@@ -9,5 +9,28 @@
     button {
         width: 5vw;
         height: 3vh;
+    }
+}
+
+.review-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    height: auto;
+    width: auto;
+    justify-content: space-evenly;
+    // background-color: grey;
+    // border: 1px solid blue;
+
+    button {
+        margin-top: 3vh;
+        width: 4vw;
+        height: 3vh;
+        cursor: pointer;
+    }
+
+    button:active {
+        background-color: #547591a8;
     }
 }

@@ -36,9 +36,9 @@ const Movie = (props) => {
           <h3>
             <u>Music:</u> {movie.music}
           </h3>
-          <div className='review-section'>
+          <div className="review-section">
             {user.id ? (
-              <Review id={props.match.params.id}/>
+              <Review id={props.match.params.id} />
             ) : (
               <h2>Log in to leave a personal review / rating!</h2>
             )}

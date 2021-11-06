@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 // import { useSelector, useDispatch } from "react-redux";
 import { UserContext } from "../../context/context";
 // import { ACTIONS } from "../../redux/reviewReducer";
@@ -8,20 +9,21 @@ import "./Review.css";
 const Review = (props) => {
   const { user } = useContext(UserContext);
   const [review, setReview] = useState("");
+  const [input, setInput] = useState("");
+  const history = useHistory();
   // const review = useSelector((state) => state.review.review);
   // const dispatch = useDispatch();
-  const [input, setInput] = useState("");
 
   useEffect(() => {
     try {
       axios
         .get(`/api/review/${props.id}/${user.id}`)
         .then(({ data }) => setReview(...data));
-      // });
     } catch (e) {
       console.log(e);
     }
   }, [props.id, user.id]);
+
   const handleInput = (val) => {
     setInput(val);
   };
@@ -33,10 +35,18 @@ const Review = (props) => {
         movieid,
         userid,
       });
-      // dispatch({
-      //   type: ACTIONS.CREATE_REVIEW,
-      //   payload: req.data,
-      // });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleDelete = (movieid, userid) => {
+    try {
+      axios.delete(`/api/review/delete/${props.id}/${user.id}`, {
+        movieid,
+        userid,
+      });
+      history.go(0);
     } catch (e) {
       console.log(e);
     }
@@ -45,9 +55,15 @@ const Review = (props) => {
   return (
     <div>
       {review ? (
-        <div>{review.review}</div>
+        <div className="review-display">
+          <h3>Your Review:</h3>
+          {review.review}
+          <button onClick={() => handleDelete(props.id, user.id)}>
+            Delete
+          </button>
+        </div>
       ) : (
-        <form className="review">
+        <form className="review-form">
           <textarea
             onChange={(e) => handleInput(e.target.value)}
             value={input}

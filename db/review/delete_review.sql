@@ -1,2 +1,2 @@
-DELETE FROM review
-WHERE id = $1 AND user = $2;
+DELETE FROM reviews
+WHERE movie = $1 AND users = $2;

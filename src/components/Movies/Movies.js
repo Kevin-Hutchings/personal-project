@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
 import { useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
+import { useHistory } from "react-router-dom";
 import "./Movies.css";
 
 const Movies = () => {
@@ -11,6 +12,7 @@ const Movies = () => {
   const [preview, setPreview] = useState([]);
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     axios
@@ -27,8 +29,13 @@ const Movies = () => {
           type: ACTIONS.ADD_TITLE,
           payload: data,
         });
+        alert('Sucess! Added movie to watchlist');
+        history.go(0);
       })
-      .catch((e) => alert("Movie already in list!"));
+      .catch((e) => {
+        alert("Movie already in list!");
+        console.log(e);
+      });
   };
 
   const previewMap = preview
