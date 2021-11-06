@@ -1,13 +1,13 @@
 const initialState = {
   title: [],
-  toggle: false,
+  toggle: true,
 };
 
 export const ACTIONS = {
   ADD_TITLE: "ADD_TITLE",
   DELETE_TITLE: "DELETE_TITLE",
   GET_LIST: "GET_LIST",
-  TOGGLE: 'TOGGLE',
+  TOGGLE: "TOGGLE",
 };
 
 export default function listReducer(state = initialState, action) {
@@ -15,12 +15,12 @@ export default function listReducer(state = initialState, action) {
     case ACTIONS.ADD_TITLE:
       return {
         ...state,
-        title: [action.payload],
+        title: action.payload,
       };
     case ACTIONS.DELETE_TITLE:
       return {
         ...state,
-        title: [],
+        title: action.payload,
       };
     case ACTIONS.GET_LIST:
       return {
@@ -31,7 +31,7 @@ export default function listReducer(state = initialState, action) {
       return {
         ...state,
         toggle: !state.toggle,
-      }
+      };
     default:
       return state;
   }

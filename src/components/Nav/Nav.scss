@@ -22,6 +22,11 @@ nav {
   button:active {
     background-color: #547591a8;
   }
+
+  h1 {
+    position: absolute;
+    right: 7%;
+  }
 }
 
 .user-info {
@@ -32,7 +37,6 @@ nav {
   align-items: center;
   justify-content: space-around;
   width: 17vw;
-  // border: 1px solid white;
 
   .list-toggle {
     height: 3vh;

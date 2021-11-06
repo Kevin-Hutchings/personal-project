@@ -27,11 +27,18 @@ const Watchlist = () => {
 
   const removeTitle = (id, title) => {
     try {
-      axios.delete(`/api/watchlist/delete/${id}/${title}`);
-      dispatch({
-        type: ACTIONS.DELETE_TITLE,
+      axios.delete(`/api/watchlist/delete/${id}/${title}`).then(({ data }) => {
+        dispatch({
+          type: ACTIONS.DELETE_TITLE,
+          payload: data,
+        });
       });
-      history.go(0);
+      axios.get(`/api/watchlist/${user.id}`).then(({ data }) => {
+        dispatch({
+          type: ACTIONS.GET_LIST,
+          payload: data,
+        });
+      });
     } catch (e) {
       console.log(e);
     }

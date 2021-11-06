@@ -33,6 +33,11 @@ nav button:active {
   background-color: #547591a8;
 }
 
+nav h1 {
+  position: absolute;
+  right: 7%;
+}
+
 .user-info {
   position: absolute;
   right: 6%;
