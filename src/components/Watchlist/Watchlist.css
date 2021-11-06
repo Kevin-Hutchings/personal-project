@@ -12,7 +12,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  position: absolute;
+  position: fixed;
   right: 1%;
   margin-top: 9vh;
 }
@@ -26,7 +26,7 @@
 }
 
 .list-info {
-  width: 15vw;
+  width: 16vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/context";
 import { useSelector, useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./Watchlist.css";
 
@@ -11,7 +10,6 @@ const Watchlist = () => {
   const list = useSelector((state) => state.list.title);
   const toggle = useSelector((state) => state.list.toggle);
   const dispatch = useDispatch();
-  const history = useHistory();
 
   useEffect(() => {
     axios

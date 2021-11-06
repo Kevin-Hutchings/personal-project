@@ -15,10 +15,9 @@ const addTitle = async (req, res) => {
             .get_list(userid)
             .then((data) => res.status(200).send(data))
         )
-        .catch((err) => res.status(404).send(err));
     }
   } catch (err) {
-    console.log(err);
+    res.status(404).send(err)
   }
 };
 

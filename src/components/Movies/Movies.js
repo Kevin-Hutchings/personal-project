@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
 import "./Movies.css";
 
@@ -11,6 +11,7 @@ const Movies = () => {
   const [preview, setPreview] = useState([]);
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
+  const toggle = useSelector((state) => state.list.toggle);
 
   useEffect(() => {
     axios
@@ -34,11 +35,11 @@ const Movies = () => {
               payload: data,
             });
           });
-          // alert("Sucess! Added movie to watchlist");
-        });
-    } catch (e) {
-      alert("Movie already in list!");
-      console.log(e);
+          alert("Sucess! Added movie to watchlist");
+        })
+        .catch((err) => alert("Movie already in list!"));
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -75,13 +76,13 @@ const Movies = () => {
         <div className="input-container">
           <input
             type="text"
-            placeholder="Search by Title"
+            placeholder="Search by Title / Director"
             onChange={(e) => setSearch(e.target.value)}
           />
           <button> A-Z </button>
         </div>
       </header>
-      <div className="catalog">{previewMap}</div>
+      <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>{previewMap}</div>
     </div>
   );
 };

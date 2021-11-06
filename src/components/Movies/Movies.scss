@@ -1,63 +1,64 @@
 .preview {
-    // border: 1px solid white;
-    height: 40vh;
-    width: 17vw;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-    
-    img {
-        height: 35vh;
-        width: 80%;
-        transition: transform 0.3s;
-    }
+  height: 40vh;
+  width: 17vw;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
 
-    img:hover {
-        transform: scale(1.1);
-    }
+  img {
+    height: 35vh;
+    width: 80%;
+    transition: transform 0.3s;
+  }
 
-    h4 {
-        display: flex;
-        justify-content: space-evenly;
-    }
+  img:hover {
+    transform: scale(1.1);
+  }
 
-    button {
-        cursor: pointer;
-    }
+  h4 {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-    button:active{
-        background-color: #547591a8;
-    }
+  button {
+    cursor: pointer;
+  }
+
+  button:active {
+    background-color: #547591a8;
+  }
 }
 
 .catalog-header {
-    /* border: 1px solid lightblue; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 5vh;
-    width: 77vw;
-    margin: 2vh 1vh 2vh 1vw;
-    
-    .input-container {
-        /* border: 1px solid black; */
-        display: flex;
-        width: 13vw;
-        justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 77vw;
+  margin: 2vh 1vh 2vh 1vw;
 
-        input {
-            height: 3vh;
-            text-align: center;
-        }
+  .input-container {
+    display: flex;
+    width: 13vw;
+    justify-content: space-between;
+
+    input {
+      height: 3vh;
+      text-align: center;
     }
+  }
 }
 
 .catalog {
-    /* border: 1px solid black; */
-    background-color: #00000052;
-    padding: 10px;
-    width: 77vw;
-    display: flex;
-    flex-flow: row wrap;
+  background-color: #00000052;
+  padding: 10px;
+  width: 95vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.smash {
+  width: 77vw;
+  transition: 150ms;
 }
