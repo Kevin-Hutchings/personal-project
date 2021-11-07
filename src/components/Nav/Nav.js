@@ -7,7 +7,7 @@ import { ACTIONS } from "../../redux/listReducer";
 // Styling
 import userLogo from "./../../images/user-logo.png";
 import studioLogo from "./../../images/studio-logo.png";
-import "./Nav.css";
+import "../../css/components/Nav.css";
 
 const Nav = () => {
   const { user } = useContext(UserContext);
@@ -36,18 +36,18 @@ const Nav = () => {
           <button> Music </button>
         </Link>
         <div>
-        <Link to="/">
-          <img className="user-icon" src={userLogo} alt="user-logo" />
-        </Link>
+          <Link to="/">
+            <img className="user-icon" src={userLogo} alt="user-logo" />
+          </Link>
         </div>
-          {user.id ? (
-            <div className="user-info">
-              <h2>Welcome, {user.username}!</h2>
-              <button className="list-toggle" onClick={handleToggle}>
-                Watchlist
-              </button>
-            </div>
-          ) : null}
+        {user.id ? (
+          <div className="user-info">
+            <h2>Welcome, {user.username}!</h2>
+            <button className="list-toggle" onClick={handleToggle}>
+              Watchlist
+            </button>
+          </div>
+        ) : null}
       </div>
     </nav>
   );

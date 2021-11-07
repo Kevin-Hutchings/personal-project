@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./Watchlist.css";
+import "../../css/components/Watchlist.css";
 
 const Watchlist = () => {
   const { user } = useContext(UserContext);

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
 import { useDispatch, useSelector } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
-import "./Movies.css";
+import "../../css/components/Movies.css";
 
 const Movies = () => {
   const { user } = useContext(UserContext);

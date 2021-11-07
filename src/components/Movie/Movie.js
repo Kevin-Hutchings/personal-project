@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../context/context";
 import axios from "axios";
 import Review from "../Review/Review";
-import "./Movie.css";
+import "../../css/components/Movie.css";
 
 const Movie = (props) => {
   const [movie, setMovie] = useState([]);

@@ -1,4 +1,4 @@
-import "./Music.css";
+import "../../css/components/Music.css";
 
 const Music = () => {
   return <h1 className="music">TEST COMPONENT PLEASE IGNORE</h1>;

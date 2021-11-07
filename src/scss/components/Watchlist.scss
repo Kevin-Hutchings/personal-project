@@ -1,0 +1,59 @@
+@use '../index';
+
+.watchlist {
+  background-color: #2a5479a8;
+  display: flex;
+  width: 19vw;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  right: 1%;
+  margin-top: 9vh;
+  animation: fadeIn linear 1s;
+  border: 2px solid black;
+  color: white;
+  text-decoration: none;
+
+  h2 {
+    text-decoration: underline;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.list-info {
+  width: 16vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2vw;
+  font-size: 1.2em;
+
+  button {
+    height: 2vh;
+    width: 2vw;
+    cursor: pointer;
+  }
+
+  button:active {
+    background-color: index.$primary-color;
+  }
+}
+
+.text-link {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

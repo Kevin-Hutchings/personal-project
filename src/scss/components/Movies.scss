@@ -1,3 +1,5 @@
+@use '../index';
+
 .preview {
   height: 40vh;
   width: 17vw;
@@ -25,7 +27,7 @@
   }
 
   button:active {
-    background-color: #547591a8;
+    background-color: index.$primary-color;
   }
 }
 

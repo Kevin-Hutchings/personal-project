@@ -1,0 +1,31 @@
+.review-form {
+  padding: 10px;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.review-form button {
+  width: 5vw;
+  height: 3vh;
+}
+
+.review-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+  height: auto;
+  width: auto;
+  justify-content: space-evenly;
+}
+.review-display button {
+  margin-top: 3vh;
+  width: 4vw;
+  height: 3vh;
+  cursor: pointer;
+}
+.review-display button:active {
+  background-color: #2a5479a8;
+}

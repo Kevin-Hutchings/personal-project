@@ -12,14 +12,12 @@
   border: 2px solid black;
   color: white;
   text-decoration: none;
-
-  h2 {
-    text-decoration: underline;
-  }
-
-  li {
-    list-style: none;
-  }
+}
+.watchlist h2 {
+  text-decoration: underline;
+}
+.watchlist li {
+  list-style: none;
 }
 
 .list-info {
@@ -30,16 +28,14 @@
   align-items: center;
   margin-right: 2vw;
   font-size: 1.2em;
-
-  button {
-    height: 2vh;
-    width: 2vw;
-    cursor: pointer;
-  }
-
-  button:active {
-    background-color: #547591a8;
-  }
+}
+.list-info button {
+  height: 2vh;
+  width: 2vw;
+  cursor: pointer;
+}
+.list-info button:active {
+  background-color: #2a5479a8;
 }
 
 .text-link {

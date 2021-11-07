@@ -1,7 +1,9 @@
+@use '../index';
+
 .auth-form {
   border: 2px solid black;
   border-radius: 25px;
-  background-color: #547591a8;
+  background-color: index.$primary-color;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -33,7 +35,7 @@
   }
 
   button:active {
-    background-color: #547591a8;
+    background-color: index.$primary-color;
   }
 }
 
@@ -51,6 +53,6 @@
   }
 
   button:active {
-    background-color: #547591a8;
+    background-color: index.$primary-color;
   }
 }

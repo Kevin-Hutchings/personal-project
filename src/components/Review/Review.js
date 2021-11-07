@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { UserContext } from "../../context/context";
 // import { ACTIONS } from "../../redux/reviewReducer";
 import axios from "axios";
-import "./Review.css";
+import "../../css/components/Review.css";
 
 const Review = (props) => {
   const { user } = useContext(UserContext);

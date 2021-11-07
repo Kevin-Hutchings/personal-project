@@ -3,7 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import authReducer, { initialState, ACTIONS } from "../../redux/authReducer";
 import { useUserContext } from "./../../context/context";
-import "./Auth.css";
+import "../../css/components/Auth.css";
 
 const Auth = () => {
   const [state, dispatch] = useReducer(authReducer, initialState);
