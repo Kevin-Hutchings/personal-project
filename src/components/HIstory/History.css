@@ -9,8 +9,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80vw;
+  margin-left: 10%;
 }
 
 .history h1 {
@@ -35,15 +38,21 @@
           flex-direction: column;
   margin-top: 3vh;
   padding: 1%;
-  width: 80vw;
   background-color: #547591a8;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
-.history .miyazaki, .history .hisaishi {
-  margin-top: 3vh;
+.history .miyazaki,
+.history .hisaishi {
+  margin-top: 2vh;
   padding: 1%;
-  width: 80vw;
   background-color: #547591a8;
-  border: 1px solid black;
+  border: 2px solid black;
+}
+
+.smash {
+  width: 75vw;
+  margin-left: 3%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }

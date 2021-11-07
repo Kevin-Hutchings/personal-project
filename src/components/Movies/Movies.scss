@@ -36,15 +36,18 @@
   justify-content: space-between;
   height: 5vh;
   width: 77vw;
-  margin: 2vh 1vh 2vh 1vw;
+  margin: 2vh 1vh 2vh 1.5vw;
 
   .input-container {
     display: flex;
-    width: 13vw;
+    position: relative;
+    left: 25%;
+    width: 15vw;
     justify-content: space-between;
 
     input {
       height: 3vh;
+      width: 12vw;
       text-align: center;
     }
   }
@@ -52,13 +55,16 @@
 
 .catalog {
   background-color: #00000052;
+  border: 2px solid black;
   padding: 10px;
   width: 95vw;
   display: flex;
   flex-flow: row wrap;
+  margin-left: 1.5vw;
 }
 
 .smash {
-  width: 77vw;
-  transition: 150ms;
+  width: 75vw;
+  position: relative;
+  right: 1%;
 }

@@ -1,54 +1,56 @@
 .auth-form {
-    border: 1px solid white;
-    border-radius: 25px;
-    background-color: #547591a8;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #547591a8;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin: 5vh 35vw;
+  padding: 20px;
+  width: 30vw;
+  height: 30vh;
+
+  input {
+    height: 5vh;
+    width: 20vw;
+    text-align: center;
+    border: 2px solid black;
+  }
+
+  .buttons {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    flex-flow: column nowrap;
-    margin: 5vh 35vw;
-    padding: 20px;
-    width: 30vw;
-    height: 30vh;
+    width: 23vw;
+    justify-content: space-evenly;
+  }
 
-    input {
-        height: 5vh;
-        width: 20vw;
-        text-align: center;
-    }
+  button {
+    height: 5vh;
+    width: 6vw;
+    cursor: pointer;
+    border: 2px solid black;
+  }
 
-    .buttons{
-        display: flex;
-        align-items: center;
-        width: 23vw;
-        justify-content: space-evenly;
-    }
-
-    button {
-        height: 5vh;
-        width: 6vw;
-        cursor: pointer;
-    }
-
-    button:active {
-        background-color: #547591a8;
-    }
+  button:active {
+    background-color: #547591a8;
+  }
 }
 
 .welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2vw;
 
-    button {
-        height: 5vh;
-        width: 6vw;
-        cursor: pointer;
-    }
+  button {
+    height: 5vh;
+    width: 6vw;
+    cursor: pointer;
+  }
 
-    button:active {
-        background-color: #547591a8;
-    }
+  button:active {
+    background-color: #547591a8;
+  }
 }

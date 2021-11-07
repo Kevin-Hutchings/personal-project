@@ -1,5 +1,5 @@
 .auth-form {
-  border: 1px solid white;
+  border: 2px solid black;
   border-radius: 25px;
   background-color: #547591a8;
   display: -webkit-box;
@@ -25,6 +25,7 @@
   height: 5vh;
   width: 20vw;
   text-align: center;
+  border: 2px solid black;
 }
 
 .auth-form .buttons {
@@ -44,6 +45,7 @@
   height: 5vh;
   width: 6vw;
   cursor: pointer;
+  border: 2px solid black;
 }
 
 .auth-form button:active {

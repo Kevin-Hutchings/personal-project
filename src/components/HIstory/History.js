@@ -1,8 +1,14 @@
+import React, { useContext } from "react";
+import { UserContext } from "../../context/context";
+import { useSelector } from "react-redux";
 import "./History.css";
 
 const History = () => {
+  const { user } = useContext(UserContext);
+  const toggle = useSelector((state) => state.list.toggle);
+
   return (
-    <div className="history">
+    <div className={`history ${toggle && user.id ? "smash" : ""}`}>
       <section className="history-about">
         <h1>About the studio</h1>
         <ul>

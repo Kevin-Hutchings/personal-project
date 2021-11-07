@@ -20,7 +20,7 @@ const Auth = () => {
         password,
       });
       dispatch({ type: ACTIONS.REGISTER, payload: { data: req.data } });
-      history.push('/home')
+      history.goBack();
     } catch (err) {
       console.log(err);
     }
@@ -32,20 +32,20 @@ const Auth = () => {
       const req = await axios.post("/api/auth/login", { username, password });
       dispatch({ type: ACTIONS.LOGIN, payload: { data: req.data } });
       setUser(req.data);
-      history.push('/movies');
+      history.goBack();
     } catch (err) {
       console.log(err);
     }
   };
 
   const logout = () => {
-    axios
-      .post("/api/auth/logout")
-      .then(() => {
-        // dispatch({ type: ACTIONS.LOGOUT });
+    try {
+      axios.post("/api/auth/logout").then(() => {
         setUser({});
-      })
-      .catch((err) => console.log(err));
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -56,7 +56,7 @@ const Auth = () => {
           <button onClick={logout}> Logout</button>
         </div>
       ) : (
-        <form className='auth-form'>
+        <form className="auth-form">
           <input
             type="text"
             placeholder="Username"

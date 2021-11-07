@@ -82,7 +82,9 @@ const Movies = () => {
           <button> A-Z </button>
         </div>
       </header>
-      <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>{previewMap}</div>
+      <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>
+        {previewMap}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .watchlist {
-  background-color: #000000d8;
+  background-color: #2a5479a8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,9 @@
   position: fixed;
   right: 1%;
   margin-top: 9vh;
+  -webkit-animation: fadeIn linear 1s;
+          animation: fadeIn linear 1s;
+  border: 2px solid black;
 }
 
 .watchlist h2 {
@@ -52,4 +55,22 @@
 
 .list-info button:active {
   background-color: #547591a8;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

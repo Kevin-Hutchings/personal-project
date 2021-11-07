@@ -39,16 +39,14 @@ const Nav = () => {
           <img className="user-icon" src={userLogo} alt="user-logo" />
         </Link>
         <div>
-          {!user.id ? (
-            <h1>log in</h1>
-          ) : (
+          {user.id ? (
             <div className="user-info">
               <h2>Welcome, {user.username}!</h2>
               <button className="list-toggle" onClick={handleToggle}>
                 Watchlist
               </button>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </nav>
