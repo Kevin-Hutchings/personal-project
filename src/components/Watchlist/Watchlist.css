@@ -18,6 +18,8 @@
   -webkit-animation: fadeIn linear 1s;
           animation: fadeIn linear 1s;
   border: 2px solid black;
+  color: white;
+  text-decoration: none;
 }
 
 .watchlist h2 {
@@ -55,6 +57,11 @@
 
 .list-info button:active {
   background-color: #547591a8;
+}
+
+.text-link {
+  color: white;
+  text-decoration: none;
 }
 
 @-webkit-keyframes fadeIn {

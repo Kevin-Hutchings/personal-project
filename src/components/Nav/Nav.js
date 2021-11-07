@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
 
-//styling
+// Styling
 import userLogo from "./../../images/user-logo.png";
 import studioLogo from "./../../images/studio-logo.png";
 import "./Nav.css";
@@ -35,10 +35,11 @@ const Nav = () => {
         <Link to="/music">
           <button> Music </button>
         </Link>
+        <div>
         <Link to="/">
           <img className="user-icon" src={userLogo} alt="user-logo" />
         </Link>
-        <div>
+        </div>
           {user.id ? (
             <div className="user-info">
               <h2>Welcome, {user.username}!</h2>
@@ -47,7 +48,6 @@ const Nav = () => {
               </button>
             </div>
           ) : null}
-        </div>
       </div>
     </nav>
   );

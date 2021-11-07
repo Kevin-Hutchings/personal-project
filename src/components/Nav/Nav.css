@@ -19,13 +19,13 @@ nav {
 }
 
 nav button {
-  height: 65px;
-  width: 120px;
+  height: 7.5vh;
+  width: 7vw;
   background-color: #7e7e7ea8;
   color: white;
   border-radius: 12%;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid black;
   font-size: 1.2em;
 }
 
@@ -53,7 +53,7 @@ nav h1 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 17vw;
+  width: 18vw;
 }
 
 .user-info .list-toggle {
@@ -70,7 +70,7 @@ nav h1 {
 }
 
 .buttons {
-  width: 50vw;
+  width: 40vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

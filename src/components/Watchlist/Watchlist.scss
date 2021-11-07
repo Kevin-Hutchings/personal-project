@@ -10,6 +10,8 @@
   margin-top: 9vh;
   animation: fadeIn linear 1s;
   border: 2px solid black;
+  color: white;
+  text-decoration: none;
 
   h2 {
     text-decoration: underline;
@@ -38,6 +40,11 @@
   button:active {
     background-color: #547591a8;
   }
+}
+
+.text-link {
+  color: white;
+  text-decoration: none;
 }
 
 @keyframes fadeIn {

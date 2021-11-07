@@ -53,7 +53,11 @@ const Movies = () => {
       return (
         <div key={index} className="preview">
           <Link to={`/movie/${movie.id}`}>
-            <img src={movie.img} alt="movie poster" />
+            <img
+              src={movie.img}
+              alt="movie poster"
+              title="Click me for more information!"
+            />
           </Link>
           <h4>
             {movie.title} ({movie.release_date})
