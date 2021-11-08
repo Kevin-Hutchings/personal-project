@@ -5,6 +5,7 @@
   justify-content: center;
   width: 80vw;
   margin-left: 10%;
+  margin-top: 6vh;
 }
 .history h1 {
   font-size: 2em;
@@ -13,20 +14,24 @@
 .history .history-about {
   font-size: 1.1em;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-direction: column;
   margin-top: 3vh;
+  width: 75vw;
   padding: 1%;
-  background-color: #2a5479a8;
+  background-color: #385a7785;
   border: 2px solid black;
 }
 .history .miyazaki,
 .history .hisaishi {
+  width: 75vw;
   margin-top: 2vh;
   padding: 1%;
-  background-color: #2a5479a8;
+  background-color: #385a7785;
   border: 2px solid black;
+}
+.history .collapse ul, .history .collapse p {
+  display: none;
 }
 
 .smash {

@@ -43,13 +43,13 @@ const Watchlist = () => {
     }
   };
 
-  const listMap = list.map((el, index) => {
+  const listMap = list.map((movie, index) => {
     return (
       <ul className="list-info">
-        <Link to={`/movie/${el.movie}`} className="text-link">
-          <li key={index}> {el.title} </li>
+        <Link to={`/movie/${movie.movie}`} className="text-link">
+          <li key={index}> {movie.title} </li>
         </Link>
-        <button onClick={() => removeTitle(user.id, el.title)}> - </button>
+        <button onClick={() => removeTitle(user.id, movie.title)}> - </button>
       </ul>
     );
   });

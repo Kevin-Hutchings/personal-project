@@ -13,7 +13,7 @@
   flex-flow: row nowrap;
 }
 .movie-container .movie-info {
-  background-color: #00000052;
+  background-color: #525252;
   padding: 10px;
   width: 75vw;
   display: flex;

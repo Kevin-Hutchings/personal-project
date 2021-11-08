@@ -1,4 +1,4 @@
-@use '../index';
+@use '../index' as *;
 
 .preview {
   height: 40vh;
@@ -27,7 +27,7 @@
   }
 
   button:active {
-    background-color: index.$primary-color;
+    background-color: $primary-color;
   }
 }
 
@@ -56,8 +56,8 @@
 }
 
 .catalog {
-  background-color: #00000052;
-  border: 2px solid black;
+  background-color: $secondary-color;
+  border: $border-main;
   padding: 10px;
   width: 95vw;
   display: flex;

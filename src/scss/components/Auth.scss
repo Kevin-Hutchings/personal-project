@@ -1,9 +1,9 @@
-@use '../index';
+@use '../index' as *;
 
 .auth-form {
-  border: 2px solid black;
+  border: $border-main;
   border-radius: 25px;
-  background-color: index.$primary-color;
+  background-color: $primary-color;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -17,7 +17,7 @@
     height: 5vh;
     width: 20vw;
     text-align: center;
-    border: 2px solid black;
+    border: $border-main;
   }
 
   .buttons {
@@ -31,11 +31,11 @@
     height: 5vh;
     width: 6vw;
     cursor: pointer;
-    border: 2px solid black;
+    border: $border-main;
   }
 
   button:active {
-    background-color: index.$primary-color;
+    background-color: $primary-color;
   }
 }
 
@@ -53,6 +53,6 @@
   }
 
   button:active {
-    background-color: index.$primary-color;
+    background-color: $primary-color;
   }
 }

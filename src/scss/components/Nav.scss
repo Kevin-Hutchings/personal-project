@@ -1,14 +1,14 @@
-@use '../index';
+@use '../index' as *;
 
 nav {
-  border-bottom: 2px solid black;
+  border-bottom: $border-main;
   height: 11vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   padding: 0.5%;
-  background-color: index.$primary-color;
+  background-color: $primary-color;
 
   button {
     height: 7.5vh;
@@ -17,12 +17,12 @@ nav {
     color: white;
     border-radius: 12%;
     cursor: pointer;
-    border: 2px solid black;
+    border: $border-main;
     font-size: 1.2em;
   }
 
   button:active {
-    background-color: index.$primary-color;
+    background-color: $primary-color;
   }
 
   h1 {

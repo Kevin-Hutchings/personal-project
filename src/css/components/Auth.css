@@ -1,7 +1,7 @@
 .auth-form {
   border: 2px solid black;
   border-radius: 25px;
-  background-color: #2a5479a8;
+  background-color: #385a7785;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -30,7 +30,7 @@
   border: 2px solid black;
 }
 .auth-form button:active {
-  background-color: #2a5479a8;
+  background-color: #385a7785;
 }
 
 .welcome {
@@ -46,5 +46,5 @@
   cursor: pointer;
 }
 .welcome button:active {
-  background-color: #2a5479a8;
+  background-color: #385a7785;
 }

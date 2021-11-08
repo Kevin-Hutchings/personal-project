@@ -1,7 +1,7 @@
-@use '../index';
+@use '../index' as *;
 
 .watchlist {
-  background-color: #2a5479a8;
+  background-color: $primary-color;
   display: flex;
   width: 19vw;
   flex-flow: column nowrap;
@@ -10,8 +10,8 @@
   position: fixed;
   right: 1%;
   margin-top: 9vh;
-  animation: fadeIn linear 1s;
-  border: 2px solid black;
+  animation: fadeIn linear 750ms;
+  border: $border-main;
   color: white;
   text-decoration: none;
 
@@ -40,7 +40,7 @@
   }
 
   button:active {
-    background-color: index.$primary-color;
+    background-color: $primary-color;
   }
 }
 
