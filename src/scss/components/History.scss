@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
   width: 80vw;
-  margin-left: 10%;
-  margin-top: 6vh;
+  margin-left: 8%;
+  margin-top: 1vh;
 
   h1 {
     font-size: 2em;
@@ -18,7 +18,8 @@
     font-size: 1.1em;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     margin-top: 3vh;
     width: 75vw;
     padding: 1%;
@@ -26,24 +27,22 @@
     border: $border-main;
   }
 
-  .miyazaki,
-  .hisaishi {
+  .history-about:hover {
+    background-color: #49739b85;
+  }
+
+  .history-content{
     width: 75vw;
-    margin-top: 2vh;
+    margin-top: 1vh;
     padding: 1%;
     background-color: $primary-color;
     border: $border-main;
   }
 
-  .collapse {
-    ul, p {
-      display: none;
-    }
-  }
 }
 
-.smash {
-  width: 75vw;
-  margin-left: 3%;
+.history-smash {
+  width: 68vw;
+  margin-left: 4%;
   transition: 200ms;
 }

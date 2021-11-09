@@ -18,6 +18,9 @@ nav button {
   border: 2px solid black;
   font-size: 1.2em;
 }
+nav button:hover {
+  background-color: #8b8b8b;
+}
 nav button:active {
   background-color: #385a7785;
 }

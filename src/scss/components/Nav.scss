@@ -21,6 +21,10 @@ nav {
     font-size: 1.2em;
   }
 
+  button:hover {
+    background-color: #8b8b8b;
+  }
+
   button:active {
     background-color: $primary-color;
   }
