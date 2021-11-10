@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
   width: 80vw;
-  margin-left: 8%;
-  margin-top: 1vh;
+  margin-left: 9%;
+  margin-top: 6vh;
 
   h1 {
     font-size: 2em;
@@ -21,7 +21,7 @@
     align-items: center;
     flex-direction: row;
     margin-top: 3vh;
-    width: 75vw;
+    width: 70vw;
     padding: 1%;
     background-color: $primary-color;
     border: $border-main;
@@ -32,7 +32,7 @@
   }
 
   .history-content{
-    width: 75vw;
+    width: 70vw;
     margin-top: 1vh;
     padding: 1%;
     background-color: $primary-color;
@@ -42,7 +42,7 @@
 }
 
 .history-smash {
+  margin-left: 6vw;
   width: 68vw;
-  margin-left: 4%;
   transition: 200ms;
 }

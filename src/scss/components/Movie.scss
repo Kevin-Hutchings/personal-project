@@ -9,7 +9,7 @@
 .movie-container {
   border: $border-main;
   width: 75vw;
-  margin: 1.75vh 0 0 3vw;
+  margin: 1.5vh auto;
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -39,4 +39,8 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+.movie-smash {
+  margin: 1.75vh 0 0 3vw;
 }

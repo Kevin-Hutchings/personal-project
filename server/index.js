@@ -15,6 +15,7 @@ const {
     addTitle,
     removeTitle,
     getList,
+    getStats,
 } = require('./controllers/watchlist');
 const {
     createReview,
@@ -62,6 +63,7 @@ app.post('/api/auth/logout', logout);
 app.get('/api/watchlist/:id', getList);
 app.post('/api/watchlist/add/:id', addTitle);
 app.delete('/api/watchlist/delete/:id/:title', removeTitle);
+app.get('/api/stats/', getStats);
 
 // Review Endpoints
 app.get('/api/review/:id/:userid', getReview);

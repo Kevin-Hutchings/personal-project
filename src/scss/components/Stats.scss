@@ -1,0 +1,8 @@
+@use '../index';
+
+.stats {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}

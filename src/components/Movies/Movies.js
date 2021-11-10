@@ -76,14 +76,14 @@ const Movies = () => {
   return (
     <div>
       <header className="catalog-header">
-        <h1> The Movies of Studio Ghibli</h1>
+        <h1>The Movies of Studio Ghibli</h1>
         <div className="input-container">
           <input
             type="text"
             placeholder="Search by Title / Director"
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button> A-Z </button>
+          <button>A-Z</button>
         </div>
       </header>
       <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>

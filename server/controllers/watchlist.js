@@ -14,10 +14,10 @@ const addTitle = async (req, res) => {
           db.watchlist
             .get_list(userid)
             .then((data) => res.status(200).send(data))
-        )
+        );
     }
   } catch (err) {
-    res.status(404).send(err)
+    res.status(404).send(err);
   }
 };
 
@@ -41,8 +41,17 @@ const getList = (req, res) => {
     .catch((err) => res.status(404).send(err));
 };
 
+const getStats = (req, res) => {
+  const db = req.app.get("db");
+  db.watchlist
+    .get_stats()
+    .then((data) => res.status(200).send(data))
+    .catch((err) => res.status(404).send(err));
+};
+
 module.exports = {
   addTitle,
   removeTitle,
   getList,
+  getStats,
 };

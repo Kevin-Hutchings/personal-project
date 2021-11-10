@@ -2,11 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../context/context";
 import axios from "axios";
 import Review from "../Review/Review";
+import { useSelector } from "react-redux";
 import "../../css/components/Movie.css";
 
 const Movie = (props) => {
   const [movie, setMovie] = useState([]);
   const { user } = useContext(UserContext);
+  const toggle = useSelector((state) => state.list.toggle)
 
   useEffect(() => {
     axios
@@ -18,7 +20,7 @@ const Movie = (props) => {
   return (
     <div>
       <h1 className="movie-title"> {movie.title} </h1>
-      <section className="movie-container">
+      <section className={`movie-container ${toggle ? "movie-smash" : ""}`}>
         <img src={movie.img} alt="movie poster" />
         <div className="movie-info">
           <section>

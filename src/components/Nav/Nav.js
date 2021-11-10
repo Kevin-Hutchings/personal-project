@@ -22,8 +22,8 @@ const Nav = () => {
   return (
     <nav>
       <img className="studio-logo" src={studioLogo} alt="studio logo" />
-      <div className="buttons">
-        <Link to="/home">
+      <div className="nav-buttons">
+        <Link to="/">
           <button> Home </button>
         </Link>
         <Link to="/movies">
@@ -35,8 +35,11 @@ const Nav = () => {
         <Link to="/music">
           <button> Music </button>
         </Link>
+        <Link to="/stats">
+          <button> Stats </button>
+        </Link>
         <div>
-          <Link to="/">
+          <Link to="/auth">
             <img className="user-icon" src={userLogo} alt="user-logo" />
           </Link>
         </div>

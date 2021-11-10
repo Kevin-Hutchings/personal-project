@@ -29,6 +29,13 @@ nav h1 {
   right: 7%;
 }
 
+.nav-buttons {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 3vw;
+}
+
 .user-info {
   position: absolute;
   right: 6%;
@@ -39,7 +46,7 @@ nav h1 {
   width: 18vw;
 }
 .user-info .list-toggle {
-  height: 3vh;
+  height: 4vh;
   width: 5vw;
   font-size: 0.75em;
 }
@@ -49,12 +56,6 @@ nav h1 {
   width: 180px;
   position: absolute;
   left: 1%;
-}
-
-.buttons {
-  width: 40vw;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .user-icon {

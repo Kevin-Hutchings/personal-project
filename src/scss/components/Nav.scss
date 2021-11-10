@@ -35,6 +35,14 @@ nav {
   }
 }
 
+.nav-buttons {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  // border: $border-main;
+  margin-left: 3vw;
+}
+
 .user-info {
   position: absolute;
   right: 6%;
@@ -45,7 +53,7 @@ nav {
   width: 18vw;
 
   .list-toggle {
-    height: 3vh;
+    height: 4vh;
     width: 5vw;
     font-size: 0.75em;
   }
@@ -58,11 +66,6 @@ nav {
   left: 1%;
 }
 
-.buttons {
-  width: 40vw;
-  display: flex;
-  justify-content: space-evenly;
-}
 
 .user-icon {
   height: 50px;

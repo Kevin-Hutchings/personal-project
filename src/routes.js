@@ -9,15 +9,17 @@ import History from "./components/History/History";
 import Auth from "./components/Auth/Auth";
 import Watchlist from "./components/Watchlist/Watchlist";
 import Music from "./components/Music/Music";
+import Stats from "./components/Stats/Stats";
 
 export default (
   <Switch>
-    <Route component={Auth} exact path="/" />
-    <Route component={Home} path="/home" />
+    <Route component={Auth} path="/auth" />
     <Route component={Movies} path="/movies" />
     <Route component={Movie} path="/movie/:id" />
     <Route component={History} path="/history" />
     <Route component={Watchlist} path="/watchlist" />
     <Route component={Music} path="/music" />
+    <Route component={Stats} path="/stats" />
+    <Route component={Home} exact path="/" />
   </Switch>
 );

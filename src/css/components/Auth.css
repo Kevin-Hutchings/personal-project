@@ -17,7 +17,7 @@
   text-align: center;
   border: 2px solid black;
 }
-.auth-form .buttons {
+.auth-form .auth-buttons {
   display: flex;
   align-items: center;
   width: 23vw;

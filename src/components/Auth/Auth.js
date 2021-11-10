@@ -93,7 +93,7 @@ const Auth = () => {
               })
             }
           />
-          <div className="buttons">
+          <div className="auth-buttons">
             <button onClick={login}> Log In </button>
             <button onClick={register}> Register </button>
             <button onClick={logout}> Logout </button>
