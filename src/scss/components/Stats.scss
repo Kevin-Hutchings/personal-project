@@ -1,8 +1,15 @@
-@use '../index';
+@use '../index' as *;
 
 .stats {
   display: flex;
-  align-content: center;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
+  width: 80vw;
+  border: $border-main;
+}
+
+.pie-chart {
+  width: 38vw;
 }

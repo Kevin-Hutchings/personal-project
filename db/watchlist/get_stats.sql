@@ -1,3 +1,5 @@
 SELECT title, COUNT(*)
 FROM watchlist
-GROUP BY title;
+GROUP BY title
+ORDER BY COUNT DESC
+LIMIT 10;
