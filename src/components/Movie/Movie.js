@@ -42,7 +42,7 @@ const Movie = (props) => {
             {user.id ? (
               <Review id={props.match.params.id} />
             ) : (
-              <h2>Log in to leave a personal review / rating!</h2>
+              <h2>Log in to leave a personal review!</h2>
             )}
           </div>
         </div>

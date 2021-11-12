@@ -15,7 +15,16 @@ const getPreview = (req, res) => {
     .catch((err) => res.status(500).send("error: ", err));
 };
 
+const getRatings = (req, res) => {
+  const db = req.app.get("db");
+  db.movie
+    .get_ratings()
+    .then((data) => res.status(200).send(data))
+    .catch((err) => res.status(404).send(err));
+};
+
 module.exports = {
   getMovie,
   getPreview,
+  getRatings,
 };

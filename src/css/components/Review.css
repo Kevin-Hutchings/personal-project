@@ -16,9 +16,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 3vh;
-  height: auto;
-  width: auto;
+  max-width: 50vw;
+  padding: 1vw;
   justify-content: space-evenly;
+  background-color: #3b51648a;
+  border: 2px solid black;
 }
 .review-display button {
   margin-top: 3vh;

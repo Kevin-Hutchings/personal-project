@@ -7,9 +7,16 @@
   flex-direction: column;
   margin: 0 auto;
   width: 80vw;
-  border: $border-main;
+  background-color: #a3a3a3;
+  // border: $border-main;
 }
 
 .pie-chart {
   width: 38vw;
+}
+
+.bar {
+  
+  margin-top: 3vw;
+  width: 50vw;
 }

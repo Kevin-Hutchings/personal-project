@@ -41,7 +41,7 @@ const getList = (req, res) => {
     .catch((err) => res.status(404).send(err));
 };
 
-const getStats = (req, res) => {
+const getListStats = (req, res) => {
   const db = req.app.get("db");
   db.watchlist
     .get_stats()
@@ -53,5 +53,5 @@ module.exports = {
   addTitle,
   removeTitle,
   getList,
-  getStats,
+  getListStats,
 };

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Pie } from "react-chartjs-2";
-export const PieChart = () => {
+
+export const ListChart = () => {
   const [listData, setListData] = useState([]);
 
   useEffect(() => {
     try {
-      axios.get("/api/stats").then(({ data }) => setListData(data));
+      axios.get("/api/stats/list").then(({ data }) => setListData(data));
     } catch (err) {
       console.log(err);
     }
@@ -19,16 +20,16 @@ export const PieChart = () => {
         label: "# of occurences",
         data: listData.map((el) => el.count),
         backgroundColor: [
-          "#ff0000",
-          "#ff4000",
-          "#ff8000",
-          "#ffbf00",
-          "#ffff00",
-          "#bfff00",
-          "#80ff00",
-          "#0040ff",
-          "#8000ff",
-          "#808080",
+          "#ff4d4d",
+          "#ff794d",
+          "#ffa64d",
+          "#ffff4d",
+          "#79ff4d",
+          "#4dffa6",
+          "#4dd2ff",
+          "#794dff",
+          "#d24dff",
+          "#ff4d79",
         ],
         borderColor: "#385a7785",
       },
