@@ -14,22 +14,22 @@ export const MovieRatings = () => {
   }, []);
 
   const data = {
-    labels: ratings.map((el) => el.title),
+    labels: ratings.map((movie) => movie.title),
     datasets: [
       {
         label: "metacritic",
-        data: ratings.map((el) => el.metascore),
+        data: ratings.map((movie) => movie.metascore),
         backgroundColor: "#385a7785",
         borderColor: "#000000",
         borderWidth: 2,
       },
       {
         label: "Rotten Tomatoes",
-        data: ratings.map((el) => el.tomato),
-        backgroundColor: "#ff4d4d",
+        data: ratings.map((movie) => movie.tomato),
+        backgroundColor: "#f04242",
         borderColor: "#000000",
         borderWidth: 2,
-      }
+      },
     ],
   };
 
@@ -37,6 +37,21 @@ export const MovieRatings = () => {
     plugins: {
       legend: {
         labels: {
+          color: "white",
+        },
+      },
+    },
+    scales: {
+      xAxes: {
+        // grid: {
+        //   color: "grey",
+        // },
+        ticks: {
+          color: "white",
+        },
+      },
+      yAxes: {
+        ticks: {
           color: "white",
         },
       },

@@ -52,7 +52,7 @@ const Auth = () => {
     <div>
       {user.id ? (
         <div className="welcome">
-          <h1> Welcome {user.username}! </h1>
+          <h1> Welcome, {user.username}! </h1>
           <button onClick={logout}> Logout</button>
         </div>
       ) : (

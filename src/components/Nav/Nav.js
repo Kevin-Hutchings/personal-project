@@ -22,6 +22,7 @@ const Nav = () => {
   return (
     <nav>
       <img className="studio-logo" src={studioLogo} alt="studio logo" />
+
       <div className="nav-buttons">
         <Link to="/">
           <button> Home </button>
@@ -38,11 +39,9 @@ const Nav = () => {
         <Link to="/stats">
           <button> Stats </button>
         </Link>
-        <div>
-          <Link to="/auth">
-            <img className="user-icon" src={userLogo} alt="user-logo" />
-          </Link>
-        </div>
+      </div>
+
+      <div>
         {user.id ? (
           <div className="user-info">
             <h2>Welcome, {user.username}!</h2>
@@ -52,6 +51,10 @@ const Nav = () => {
           </div>
         ) : null}
       </div>
+          
+      <Link to="/auth">
+        <img className="user-icon" src={userLogo} alt="user-logo" />
+      </Link>
     </nav>
   );
 };

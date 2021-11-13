@@ -1,4 +1,4 @@
-@use '../index' as *;
+@use '../abstracts' as *;
 
 .stats {
   display: flex;
@@ -7,16 +7,18 @@
   flex-direction: column;
   margin: 0 auto;
   width: 80vw;
-  background-color: #a3a3a3;
-  // border: $border-main;
+  background-color: #929292;
+  border-left: $border-main;
+  border-right: $border-main;
 }
 
 .pie-chart {
   width: 38vw;
+  @include chart;
 }
 
 .bar {
-  
   margin-top: 3vw;
-  width: 50vw;
+  width: 65vw;
+  @include chart;
 }

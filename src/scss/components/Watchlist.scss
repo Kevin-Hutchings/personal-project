@@ -1,4 +1,4 @@
-@use '../index' as *;
+@use '../abstracts' as *;
 
 .watchlist {
   background-color: $primary-color;
@@ -56,4 +56,8 @@
   100% {
     opacity: 1;
   }
+}
+
+@include breakpoint(mobile) {
+  
 }

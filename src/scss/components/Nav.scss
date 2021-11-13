@@ -1,4 +1,4 @@
-@use '../index' as *;
+@use "../abstracts" as *;
 
 nav {
   border-bottom: $border-main;
@@ -33,30 +33,39 @@ nav {
     position: absolute;
     right: 7%;
   }
+  
 }
 
 .nav-buttons {
   width: 50vw;
   display: flex;
   justify-content: space-around;
-  // border: $border-main;
-  margin-left: 3vw;
+  margin-left: 18vw;
+}
+
+.user-icon {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 1%;
+  top: 4%;
 }
 
 .user-info {
-  position: absolute;
-  right: 6%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  width: 18vw;
+  justify-content: space-between;
+  width: 16vw;
+  position: relative;
+  left: 20%;
 
   .list-toggle {
     height: 4vh;
     width: 5vw;
     font-size: 0.75em;
   }
+  
 }
 
 .studio-logo {
@@ -66,11 +75,29 @@ nav {
   left: 1%;
 }
 
+@include breakpoint(mobile) {
+  nav {
+    .nav-buttons {
+      display: none;
+    }
+  }
 
-.user-icon {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  right: 2%;
-  margin-top: 1vh;
+  .user-info {
+    position: absolute;
+    left: 67%;
+    top: 3%;
+
+    h2 {
+      display: none;
+    }
+
+    .list-toggle {
+      height: 6vh;
+      width: 16vw;
+    }
+  }
+
+  .user-icon {
+    top: 3%;
+  }
 }

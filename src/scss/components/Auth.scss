@@ -1,4 +1,4 @@
-@use '../index' as *;
+@use "../abstracts" as *;
 
 .auth-form {
   border: $border-main;
@@ -8,7 +8,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-flow: column nowrap;
-  margin: 5vh 35vw;
+  margin: 5vh auto;
   padding: 20px;
   width: 30vw;
   height: 30vh;
@@ -28,10 +28,7 @@
   }
 
   button {
-    height: 5vh;
-    width: 6vw;
-    cursor: pointer;
-    border: $border-main;
+    @include button;
   }
 
   button:active {
@@ -44,15 +41,45 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2vw;
+  margin: 5vw;
 
   button {
-    height: 5vh;
-    width: 6vw;
-    cursor: pointer;
+    @include button;
   }
 
   button:active {
     background-color: $primary-color;
+  }
+}
+
+@include breakpoint(mobile) {
+  .auth-form {
+    width: 80vw;
+    height: 30vh;
+
+    input {
+      width: 70vw;
+    }
+
+    .auth-buttons {
+      display: flex;
+      align-items: center;
+      width: 78vw;
+      justify-content: space-evenly;
+    }
+
+    button {
+      width: 22vw;
+    }
+
+    button:active {
+      background-color: $primary-color;
+    }
+  }
+
+  .welcome {
+    button {
+      width: 20vw;
+    }
   }
 }
