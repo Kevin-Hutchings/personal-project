@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
 import { useDispatch, useSelector } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "../../css/components/Movies.css";
 
 const Movies = () => {
@@ -35,9 +37,9 @@ const Movies = () => {
               payload: data,
             });
           });
-          alert("Sucess! Added movie to watchlist");
+          toast.success("Sucess! Added movie to watchlist");
         })
-        .catch((err) => alert("Movie already in list!"));
+        .catch((err) => toast.error("Movie already in list!"));
     } catch (err) {
       console.log(err);
     }
@@ -89,6 +91,7 @@ const Movies = () => {
       <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>
         {previewMap}
       </div>
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };
