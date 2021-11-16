@@ -67,14 +67,29 @@ nav h1 {
 }
 
 @media (max-width: 480px) {
+  nav {
+    position: sticky;
+    top: 0;
+  }
+  nav button {
+    width: 30vw;
+    height: 12vh;
+    background-color: #5d7285;
+    border-radius: 0;
+  }
   nav .nav-buttons {
-    display: none;
+    flex-direction: column;
+    position: relative;
+    top: 39vh;
+    right: 25%;
+    height: 65vh;
+    justify-content: space-evenly;
   }
 
   .user-info {
     position: absolute;
     left: 67%;
-    top: 3%;
+    top: 25%;
   }
   .user-info h2 {
     display: none;
@@ -82,9 +97,18 @@ nav h1 {
   .user-info .list-toggle {
     height: 6vh;
     width: 16vw;
+    border-radius: 12%;
+    background-color: grey;
   }
 
   .user-icon {
-    top: 3%;
+    top: 25%;
+  }
+
+  .studio-logo {
+    height: 70px;
+    width: 140px;
+    position: absolute;
+    left: 1%;
   }
 }

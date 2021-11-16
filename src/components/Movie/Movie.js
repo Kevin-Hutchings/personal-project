@@ -8,7 +8,7 @@ import "../../css/components/Movie.css";
 const Movie = (props) => {
   const [movie, setMovie] = useState([]);
   const { user } = useContext(UserContext);
-  const toggle = useSelector((state) => state.list.toggle)
+  const toggle = useSelector((state) => state.list.toggle);
 
   useEffect(() => {
     axios
@@ -20,7 +20,7 @@ const Movie = (props) => {
   return (
     <div>
       <h1 className="movie-title"> {movie.title} </h1>
-      <section className={`movie-container ${toggle ? "movie-smash" : ""}`}>
+      <section className={`movie-container ${toggle && user.id ? "movie-smash" : ""}`}>
         <img src={movie.img} alt="movie poster" />
         <div className="movie-info">
           <section>

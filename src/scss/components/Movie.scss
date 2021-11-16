@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .movie-title {
   display: flex;
@@ -9,7 +9,7 @@
 .movie-container {
   border: $border-main;
   width: 75vw;
-  margin: 1.5vh auto;
+  margin: 2vh auto;
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -39,6 +39,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h2 {
+      margin-top: 6vh;
+    }
   }
 }
 

@@ -8,6 +8,7 @@
 .preview img {
   height: 35vh;
   width: 80%;
+  border: 2px solid black;
   transition: transform 0.3s;
 }
 .preview img:hover {
@@ -43,6 +44,7 @@
 .catalog-header .input-container input {
   height: 3vh;
   width: 12vw;
+  border: 2px solid black;
   text-align: center;
 }
 
@@ -50,7 +52,7 @@
   background-color: #525252;
   border: 2px solid black;
   padding: 10px;
-  width: 95vw;
+  max-width: 94vw;
   display: flex;
   flex-flow: row wrap;
   margin-left: 1.5vw;
@@ -60,4 +62,33 @@
   width: 75vw;
   position: relative;
   right: 1%;
+}
+
+@media (max-width: 480px) {
+  .catalog-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 3vh;
+    width: 75vw;
+    font-size: 0.6em;
+    margin: 2vh 1vh 2vh 1.5vw;
+  }
+  .catalog-header .input-container {
+    display: flex;
+    left: 25%;
+    width: 45vw;
+    justify-content: space-between;
+  }
+  .catalog-header .input-container input {
+    width: 45vw;
+  }
+  .catalog-header .input-container button {
+    display: none;
+  }
+
+  .smash {
+    display: none;
+  }
 }

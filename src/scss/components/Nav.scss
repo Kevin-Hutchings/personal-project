@@ -33,7 +33,6 @@ nav {
     position: absolute;
     right: 7%;
   }
-  
 }
 
 .nav-buttons {
@@ -65,7 +64,6 @@ nav {
     width: 5vw;
     font-size: 0.75em;
   }
-  
 }
 
 .studio-logo {
@@ -77,15 +75,30 @@ nav {
 
 @include breakpoint(mobile) {
   nav {
+    position: sticky;
+    top: 0;
+
+    button {
+      width: 30vw;
+      height: 12vh;
+      background-color: $mobile-blue;
+      border-radius: 0;
+    }
+
     .nav-buttons {
-      display: none;
+      flex-direction: column;
+      position: relative;
+      top: 39vh;
+      right: 25%;
+      height: 65vh;
+      justify-content: space-evenly;
     }
   }
 
   .user-info {
     position: absolute;
     left: 67%;
-    top: 3%;
+    top: 25%;
 
     h2 {
       display: none;
@@ -94,10 +107,19 @@ nav {
     .list-toggle {
       height: 6vh;
       width: 16vw;
+      border-radius: 12%;
+      background-color: grey;
     }
   }
 
   .user-icon {
-    top: 3%;
+    top: 25%;
+  }
+
+  .studio-logo {
+    height: 70px;
+    width: 140px;
+    position: absolute;
+    left: 1%;
   }
 }

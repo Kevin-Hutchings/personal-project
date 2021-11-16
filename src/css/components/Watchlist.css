@@ -33,6 +33,7 @@
   height: 2vh;
   width: 2vw;
   cursor: pointer;
+  border: 2px solid black;
 }
 .list-info button:active {
   background-color: #385a7785;
@@ -49,5 +50,26 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  .watchlist {
+    background-color: #5d7285;
+    width: 65vw;
+    align-items: center;
+    position: fixed;
+    right: 1%;
+    margin-top: 0.5vh;
+    animation: fadeIn linear 750ms;
+  }
+
+  .list-info {
+    width: 55vw;
+    justify-content: space-between;
+    font-size: 1.2em;
+  }
+  .list-info button {
+    height: 3vh;
+    width: 5vw;
   }
 }

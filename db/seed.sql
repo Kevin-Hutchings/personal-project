@@ -13,8 +13,9 @@ CREATE TABLE movies(
     release_date INT,
     director VARCHAR(50),
     music VARCHAR(50),
-    rating INT,
-    link TEXT
+    metascore INT,
+    link TEXT,
+    tomato INT
 );
 
 CREATE TABLE watchlist(

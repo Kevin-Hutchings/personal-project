@@ -19,7 +19,7 @@ export default function reviewReducer(state = initialState, action) {
     case ACTIONS.GET_REVIEW:
       return {
         ...state,
-        review: action.payload
+        review: action.payload,
       };
     case ACTIONS.DELETE_REVIEW:
       return {

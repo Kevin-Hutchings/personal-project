@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .preview {
   height: 40vh;
@@ -10,6 +10,7 @@
   img {
     height: 35vh;
     width: 80%;
+    border: $border-main;
     transition: transform 0.3s;
   }
 
@@ -50,6 +51,7 @@
     input {
       height: 3vh;
       width: 12vw;
+      border: $border-main;
       text-align: center;
     }
   }
@@ -59,15 +61,46 @@
   background-color: $secondary-color;
   border: $border-main;
   padding: 10px;
-  width: 95vw;
+  max-width: 94vw;
   display: flex;
   flex-flow: row wrap;
   margin-left: 1.5vw;
-  
 }
 
 .smash {
   width: 75vw;
   position: relative;
   right: 1%;
+}
+
+@include breakpoint(mobile) {
+  .catalog-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 3vh;
+    width: 75vw;
+    font-size: 0.6em;
+    margin: 2vh 1vh 2vh 1.5vw;
+
+    .input-container {
+      display: flex;
+      left: 25%;
+      width: 45vw;
+      justify-content: space-between;
+
+      input {
+        width: 45vw;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .smash {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .history {
   display: flex;
@@ -31,14 +31,13 @@
     background-color: #49739b85;
   }
 
-  .history-content{
+  .history-content {
     width: 70vw;
     margin-top: 1vh;
     padding: 1%;
     background-color: $primary-color;
     border: $border-main;
   }
-
 }
 
 .history-smash {
