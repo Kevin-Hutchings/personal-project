@@ -55,7 +55,7 @@
 @media (max-width: 480px) {
   .watchlist {
     background-color: #5d7285;
-    width: 65vw;
+    width: 75vw;
     align-items: center;
     position: fixed;
     right: 1%;
@@ -64,9 +64,10 @@
   }
 
   .list-info {
-    width: 55vw;
+    width: 65vw;
     justify-content: space-between;
     font-size: 1.2em;
+    margin-right: 5vw;
   }
   .list-info button {
     height: 3vh;

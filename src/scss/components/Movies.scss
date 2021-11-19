@@ -4,7 +4,7 @@
   height: 40vh;
   width: 17vw;
   padding: 10px;
-  margin: 5px;
+  margin: 0 auto;
   text-align: center;
 
   img {
@@ -61,7 +61,7 @@
   background-color: $secondary-color;
   border: $border-main;
   padding: 10px;
-  max-width: 94vw;
+  max-width: 95vw;
   display: flex;
   flex-flow: row wrap;
   margin-left: 1.5vw;
@@ -74,24 +74,42 @@
 }
 
 @include breakpoint(mobile) {
+  .preview {
+    height: 50vh;
+    width: 40vw;
+    padding: 3%;
+    text-align: center;
+
+    button {
+      height: 3vh;
+    }
+
+    img {
+      height: 40vh;
+      width: 100%;
+      border: $border-main;
+      transition: transform 0.3s;
+    }
+  }
+
   .catalog-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
     height: 3vh;
-    width: 75vw;
-    font-size: 0.6em;
-    margin: 2vh 1vh 2vh 1.5vw;
+    width: 95vw;
+    font-size: 0.65em;
+    margin: 3vh 1vh 2vh 1.5vw;
 
     .input-container {
       display: flex;
-      left: 25%;
-      width: 45vw;
-      justify-content: space-between;
+      position: unset;
+      width: 48vw;
 
       input {
-        width: 45vw;
+        width: 48vw;
       }
 
       button {
@@ -101,6 +119,7 @@
   }
 
   .smash {
-    display: none;
+    width: unset;
+    position: unset;
   }
 }

@@ -7,6 +7,7 @@ import { ACTIONS } from "../../redux/listReducer";
 // Styling
 import userLogo from "./../../images/user-logo.png";
 import studioLogo from "./../../images/studio-logo.png";
+import hamburgerLogo from "./../../images/hamburger.png";
 import "../../css/components/Nav.css";
 
 const Nav = () => {
@@ -26,29 +27,30 @@ const Nav = () => {
 
   return (
     <nav>
+      <img className="studio-logo" src={studioLogo} alt="studio logo" />
       <img
-        className="studio-logo"
-        src={studioLogo}
+        src={hamburgerLogo}
         onClick={handleMenu}
-        alt="studio logo"
+        className="mobile-menu-button"
+        alt="menu icon"
       />
 
       {menu ? (
         <div className="nav-buttons">
           <Link to="/">
-            <button> Home </button>
+            <button onClick={handleMenu}> Home </button>
           </Link>
           <Link to="/movies">
-            <button> Movies </button>
+            <button onClick={handleMenu}> Movies </button>
           </Link>
           <Link to="/history">
-            <button> History </button>
+            <button onClick={handleMenu}> History </button>
           </Link>
           <Link to="/music">
-            <button> Music </button>
+            <button onClick={handleMenu}> Music </button>
           </Link>
           <Link to="/stats">
-            <button> Stats </button>
+            <button onClick={handleMenu}> Stats </button>
           </Link>
         </div>
       ) : null}

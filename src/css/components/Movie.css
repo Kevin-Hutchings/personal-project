@@ -42,3 +42,44 @@
 .movie-smash {
   margin: 1.75vh 0 0 3vw;
 }
+
+@media (max-width: 480px) {
+  .movie-title {
+    margin: 0 auto;
+  }
+
+  .movie-container {
+    border: 2px solid black;
+    width: 85vw;
+    margin: 1vh auto;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .movie-container .movie-info {
+    background-color: #525252;
+    padding: 10px;
+    width: 81vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+  }
+  .movie-container h3 {
+    line-height: 50%;
+  }
+  .movie-container img {
+    height: 75vh;
+    width: 85vw;
+  }
+  .movie-container .review-section {
+    border-top: 1px solid white;
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .movie-container .review-section h2 {
+    margin-top: 6vh;
+  }
+}

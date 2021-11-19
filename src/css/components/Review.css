@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 3vh;
-  max-width: 50vw;
+  width: 50vw;
   padding: 1vw;
   justify-content: space-evenly;
   background-color: #3b51648a;
@@ -35,4 +35,26 @@
 }
 .review-display button:active {
   background-color: #385a7785;
+}
+
+@media (max-width: 480px) {
+  .review-form textarea {
+    width: 80vw;
+    height: 20vh;
+  }
+  .review-form button {
+    height: 5vh;
+    width: 6vw;
+    cursor: pointer;
+    border: 2px solid black;
+    width: 25vw;
+    margin-top: 2%;
+  }
+
+  .review-display {
+    width: 80vw;
+  }
+  .review-display button {
+    width: 20vw;
+  }
 }

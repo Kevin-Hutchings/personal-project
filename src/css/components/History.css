@@ -39,3 +39,32 @@
   width: 68vw;
   transition: 200ms;
 }
+
+@media (max-width: 480px) {
+  .history {
+    margin-left: 8%;
+    margin-top: 4vh;
+  }
+  .history .history-about {
+    font-size: 1.1em;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding: 2%;
+    background-color: #385a7785;
+    border: 2px solid black;
+  }
+  .history .history-content {
+    width: 90vw;
+    margin-top: 1vh;
+    padding: 2%;
+    background-color: #385a7785;
+    border: 2px solid black;
+  }
+
+  .history-smash {
+    margin-left: unset;
+    width: unset;
+    transition: unset;
+  }
+}

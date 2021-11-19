@@ -62,24 +62,19 @@
 @include breakpoint(mobile) {
   .watchlist {
     background-color: $mobile-blue;
-    // display: flex;
-    width: 65vw;
-    // flex-flow: column nowrap;
+    width: 75vw;
     align-items: center;
-    // text-align: center;
     position: fixed;
     right: 1%;
     margin-top: 0.5vh;
     animation: fadeIn linear 750ms;
-    // border: $border-main;
-    // color: white;
-    // text-decoration: none;
   }
 
   .list-info {
-    width: 55vw;
+    width: 65vw;
     justify-content: space-between;
     font-size: 1.2em;
+    margin-right: 5vw;
 
     button {
       height: 3vh;

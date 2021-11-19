@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./../../context/context";
 import { useDispatch, useSelector } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 import "../../css/components/Movies.css";
 
 const Movies = () => {
@@ -14,6 +15,7 @@ const Movies = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const toggle = useSelector((state) => state.list.toggle);
+  const customId = "custom-id-yes";
 
   useEffect(() => {
     axios
@@ -39,7 +41,11 @@ const Movies = () => {
           });
           toast.success("Sucess! Added movie to watchlist");
         })
-        .catch((err) => toast.error("Movie already in list!"));
+        .catch((err) =>
+          toast.error("Movie already in list!", {
+            toastId: customId,
+          })
+        );
     } catch (err) {
       console.log(err);
     }
@@ -91,7 +97,7 @@ const Movies = () => {
       <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>
         {previewMap}
       </div>
-      <ToastContainer position="bottom-right" />
+      <ToastContainer position="bottom-right" autoClose={2300} />
     </div>
   );
 };

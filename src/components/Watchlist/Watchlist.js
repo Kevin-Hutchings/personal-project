@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 // Styling
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import "../../css/components/Watchlist.css";
 
 const Watchlist = () => {
@@ -35,7 +35,7 @@ const Watchlist = () => {
           type: ACTIONS.DELETE_TITLE,
           payload: data,
         });
-        toast.warn("Title removed from Watchlist!")
+        toast.warn("Title removed from Watchlist!");
       });
       axios.get(`/api/watchlist/${user.id}`).then(({ data }) => {
         dispatch({
@@ -69,7 +69,7 @@ const Watchlist = () => {
           </div>
         </div>
       ) : null}
-      <ToastContainer position="bottom-right" />
+      <ToastContainer position="bottom-right" autoClose={2300} />
     </div>
   );
 };

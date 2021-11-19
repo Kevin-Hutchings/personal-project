@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 3vh;
-  max-width: 50vw;
+  width: 50vw;
   padding: 1vw;
   justify-content: space-evenly;
   background-color: #3b51648a;
@@ -38,4 +38,28 @@
   button:active {
     background-color: $primary-color;
   }
+}
+
+@include breakpoint(mobile) {
+  .review-form {
+    textarea {
+      width: 80vw;
+      height: 20vh;
+    }
+
+    button {
+      @include button;
+      width: 25vw;
+      margin-top: 2%;
+    }
+  }
+  
+  .review-display {
+    width: 80vw;
+
+    button {
+      width: 20vw;
+    }
+  }
+
 }
