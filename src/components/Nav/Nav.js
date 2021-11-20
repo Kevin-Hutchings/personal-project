@@ -3,6 +3,7 @@ import { UserContext } from "./../../context/context";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
+import { Menu } from "./Menu";
 
 // Styling
 import userLogo from "./../../images/user-logo.png";
@@ -13,7 +14,7 @@ import "../../css/components/Nav.css";
 const Nav = () => {
   const { user } = useContext(UserContext);
   const dispatch = useDispatch();
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   const handleToggle = () => {
     dispatch({
@@ -36,24 +37,14 @@ const Nav = () => {
       />
 
       {menu ? (
-        <div className="nav-buttons">
-          <Link to="/">
-            <button onClick={handleMenu}> Home </button>
-          </Link>
-          <Link to="/movies">
-            <button onClick={handleMenu}> Movies </button>
-          </Link>
-          <Link to="/history">
-            <button onClick={handleMenu}> History </button>
-          </Link>
-          <Link to="/music">
-            <button onClick={handleMenu}> Music </button>
-          </Link>
-          <Link to="/stats">
-            <button onClick={handleMenu}> Stats </button>
-          </Link>
+        <div className="mobile-menu" onClick={handleMenu}>
+          <Menu />
         </div>
       ) : null}
+
+      <div className="full-menu">
+        <Menu />
+      </div>
 
       <div>
         {user.id ? (

@@ -22,3 +22,31 @@
   width: 65vw;
   @include chart;
 }
+
+.bar-mobile {
+  display: none;
+}
+
+@include breakpoint(mobile) {
+  .stats {
+    margin: 0;
+    width: 100vw;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .pie-chart {
+    width: 95vw;
+    @include chart;
+  }
+  
+  .bar-mobile {
+    display: inline-block;
+    margin-top: 7vw;
+    @include chart;
+  }
+
+  .bar {
+    display: none;
+  }
+}

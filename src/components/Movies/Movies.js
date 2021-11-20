@@ -91,7 +91,7 @@ const Movies = () => {
             placeholder="Search by Title / Director"
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button>A-Z</button>
+          {/* <button>A-Z</button> */}
         </div>
       </header>
       <div className={`catalog ${toggle && user.id ? "smash" : ""}`}>

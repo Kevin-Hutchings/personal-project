@@ -1,6 +1,7 @@
 import React from "react";
 import { ListChart } from "./ListChart";
 import { MovieRatings } from "./MovieRatings";
+import { RatingsMobile } from "./RatingsMobile";
 import "../../css/components/Stats.css";
 
 const Stats = () => {
@@ -14,6 +15,11 @@ const Stats = () => {
       <div className="bar">
         <h1>Movie Ratings</h1>
         <MovieRatings />
+      </div>
+
+      <div className="bar-mobile">
+        <h1>Movie Ratings</h1>
+        <RatingsMobile />
       </div>
     </div>
   );

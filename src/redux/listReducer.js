@@ -1,6 +1,6 @@
 const initialState = {
   title: [],
-  toggle: true,
+  toggle: false,
 };
 
 export const ACTIONS = {

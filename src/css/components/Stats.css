@@ -22,3 +22,33 @@
   text-align: center;
   text-decoration: underline;
 }
+
+.bar-mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .stats {
+    margin: 0;
+    width: 100vw;
+    background-color: transparent;
+    border: none;
+  }
+
+  .pie-chart {
+    width: 95vw;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .bar-mobile {
+    display: inline-block;
+    margin-top: 7vw;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .bar {
+    display: none;
+  }
+}

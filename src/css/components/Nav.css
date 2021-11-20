@@ -37,10 +37,10 @@ nav h1 {
 }
 
 .user-icon {
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
   position: absolute;
-  right: 1%;
+  right: 2%;
   top: 4%;
 }
 
@@ -51,7 +51,7 @@ nav h1 {
   justify-content: space-between;
   width: 16vw;
   position: relative;
-  left: 20%;
+  left: 9%;
 }
 .user-info .list-toggle {
   height: 4vh;
@@ -61,9 +61,13 @@ nav h1 {
 
 .studio-logo {
   height: 90px;
-  width: 180px;
+  width: 200px;
   position: absolute;
-  left: 1%;
+  left: 2%;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .mobile-menu-button {
@@ -75,6 +79,12 @@ nav h1 {
     position: sticky;
     top: 0;
   }
+  nav .full-menu {
+    display: none;
+  }
+  nav .mobile-menu {
+    display: inline-block;
+  }
   nav .mobile-menu-button {
     display: block;
     position: absolute;
@@ -83,23 +93,34 @@ nav h1 {
     width: 14vw;
   }
   nav button {
-    width: 30vw;
+    width: 45vw;
     height: 12vh;
     background-color: #5d7285;
     border-radius: 0;
   }
   nav .nav-buttons {
+    margin: 0 auto;
     flex-direction: column;
     position: relative;
-    top: 39vh;
-    right: 25%;
-    height: 65vh;
+    top: 36vh;
+    right: 35%;
+    height: auto;
+    width: auto;
     justify-content: space-evenly;
+    animation: fadeIn linear 500ms;
   }
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .user-info {
     position: absolute;
-    left: 67%;
+    left: 66%;
     top: 20%;
   }
   .user-info h2 {
@@ -114,11 +135,13 @@ nav h1 {
 
   .user-icon {
     top: 25%;
+    height: 7vh;
+    width: 13vw;
   }
 
   .studio-logo {
-    height: 70px;
-    width: 165px;
+    height: 9vh;
+    width: 30vw;
     position: absolute;
     left: 20%;
   }

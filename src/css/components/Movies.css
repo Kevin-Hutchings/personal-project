@@ -2,7 +2,7 @@
   height: 40vh;
   width: 17vw;
   padding: 10px;
-  margin: 0 auto;
+  margin: 2vh auto;
   text-align: center;
 }
 .preview img {
@@ -38,12 +38,12 @@
   display: flex;
   position: relative;
   left: 25%;
-  width: 15vw;
+  width: 20vw;
   justify-content: space-between;
 }
 .catalog-header .input-container input {
   height: 3vh;
-  width: 12vw;
+  width: 20vw;
   border: 2px solid black;
   text-align: center;
 }
@@ -78,7 +78,10 @@
     height: 40vh;
     width: 100%;
     border: 2px solid black;
-    transition: transform 0.3s;
+  }
+
+  .catalog {
+    margin-left: 0;
   }
 
   .catalog-header {
@@ -90,7 +93,7 @@
     height: 3vh;
     width: 95vw;
     font-size: 0.65em;
-    margin: 3vh 1vh 2vh 1.5vw;
+    margin: 3vh 1vh 2vh 1vw;
   }
   .catalog-header .input-container {
     display: flex;
