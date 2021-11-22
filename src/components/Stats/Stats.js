@@ -1,5 +1,5 @@
 import React from "react";
-import { ListChart } from "./ListChart";
+import { ListChart } from "./listChart";
 import { MovieRatings } from "./MovieRatings";
 import { RatingsMobile } from "./RatingsMobile";
 import "../../css/components/Stats.css";

@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Movies from "./components/Movies/Movies";
 import Movie from "./components/Movie/Movie";
-import History from "./components/History/History";
+import History from "./components/HIstory/History";
 import Auth from "./components/Auth/Auth";
 import Watchlist from "./components/Watchlist/Watchlist";
 import Music from "./components/Music/Music";

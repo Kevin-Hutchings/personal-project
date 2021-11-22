@@ -2,6 +2,9 @@ require("dotenv").config();
 const massive = require("massive");
 const express = require("express");
 const session = require("express-session");
+const path = require("path");
+const port = process.env.PORT || 4242;
+const { CONNECTION_STRING, SESSION_SECRET, DATABASE_URL } = process.env;
 
 // Controllers
 const { getMovie, getPreview, getRatings } = require("./controllers/movie");
@@ -18,10 +21,7 @@ const {
   deleteReview,
 } = require("./controllers/review");
 
-const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
-
 const app = express();
-
 app.use(express.json());
 app.use(
   session({
@@ -35,7 +35,7 @@ app.use(
 );
 
 massive({
-  connectionString: CONNECTION_STRING,
+  connectionString: DATABASE_URL || CONNECTION_STRING,
   ssl: { rejectUnauthorized: false },
 })
   .then((dbInstance) => {
@@ -68,4 +68,7 @@ app.get("/api/review/:id/:userid", getReview);
 app.post("/api/review/add/:id", createReview);
 app.delete("/api/review/delete/:id/:userid", deleteReview);
 
-app.listen(SERVER_PORT, () => console.log(`Listening on ${SERVER_PORT}`));
+// Hosting
+app.use(express.static(`${__dirname}/../build`))
+
+app.listen(port, () => console.log(`Listening on ${port}`));
