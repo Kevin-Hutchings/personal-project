@@ -90,7 +90,7 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    height: 3vh;
+    height: 45px;
     width: 95vw;
     font-size: 0.65em;
     margin: 3vh 1vh 2vh 1vw;
@@ -102,6 +102,7 @@
   }
   .catalog-header .input-container input {
     width: 48vw;
+    height: 25px;
   }
   .catalog-header .input-container button {
     display: none;

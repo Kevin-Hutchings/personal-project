@@ -85,6 +85,7 @@ nav {
   nav {
     position: sticky;
     top: 0;
+    height: 60px;
 
     .full-menu {
       display: none;
@@ -98,7 +99,7 @@ nav {
       display: block;
       position: absolute;
       left: 3%;
-      height: 9vh;
+      height: 65px;
       width: 14vw;
     }
 
@@ -110,7 +111,6 @@ nav {
     }
 
     .nav-buttons {
-      // background-color: grey;
       margin: 0 auto;
       flex-direction: column;
       position: relative;
@@ -119,7 +119,7 @@ nav {
       height: auto;
       width: auto;
       justify-content: space-evenly;
-      animation: fadeIn linear 500ms;
+      animation: fadeIn linear 250ms;
     }
   }
 
@@ -151,12 +151,12 @@ nav {
 
   .user-icon {
     top: 25%;
-    height: 7vh;
+    height: 45px;
     width: 13vw;
   }
 
   .studio-logo {
-    height: 9vh;
+    height: 60px;
     width: 30vw;
     position: absolute;
     left: 20%;

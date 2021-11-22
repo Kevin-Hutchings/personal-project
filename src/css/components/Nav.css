@@ -78,6 +78,7 @@ nav h1 {
   nav {
     position: sticky;
     top: 0;
+    height: 60px;
   }
   nav .full-menu {
     display: none;
@@ -89,7 +90,7 @@ nav h1 {
     display: block;
     position: absolute;
     left: 3%;
-    height: 9vh;
+    height: 65px;
     width: 14vw;
   }
   nav button {
@@ -107,7 +108,7 @@ nav h1 {
     height: auto;
     width: auto;
     justify-content: space-evenly;
-    animation: fadeIn linear 500ms;
+    animation: fadeIn linear 250ms;
   }
 
   @keyframes fadeIn {
@@ -135,12 +136,12 @@ nav h1 {
 
   .user-icon {
     top: 25%;
-    height: 7vh;
+    height: 45px;
     width: 13vw;
   }
 
   .studio-logo {
-    height: 9vh;
+    height: 60px;
     width: 30vw;
     position: absolute;
     left: 20%;

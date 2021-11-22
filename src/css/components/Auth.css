@@ -53,10 +53,11 @@
 @media (max-width: 480px) {
   .auth-form {
     width: 80vw;
-    height: 30vh;
+    height: 200px;
   }
   .auth-form input {
     width: 70vw;
+    height: 35px;
   }
   .auth-form .auth-buttons {
     display: flex;
@@ -66,6 +67,7 @@
   }
   .auth-form button {
     width: 22vw;
+    height: 35px;
   }
 
   .welcome button {

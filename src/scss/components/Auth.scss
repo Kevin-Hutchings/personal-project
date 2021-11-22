@@ -55,10 +55,11 @@
 @include breakpoint(mobile) {
   .auth-form {
     width: 80vw;
-    height: 30vh;
+    height: 200px;
 
     input {
       width: 70vw;
+      height: 35px;
     }
 
     .auth-buttons {
@@ -70,6 +71,7 @@
 
     button {
       width: 22vw;
+      height: 35px;
     }
   }
 
