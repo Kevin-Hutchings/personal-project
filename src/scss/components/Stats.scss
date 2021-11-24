@@ -27,6 +27,31 @@
   display: none;
 }
 
+@include breakpoint(tablet) {
+  .stats {
+    margin: 0 auto;
+    width: 95vw;
+    background-color: #929292;
+    border-left: $border-main;
+    border-right: $border-main;
+  }
+  
+  .pie-chart {
+    width: 85vw;
+    @include chart;
+  }
+  
+  .bar {
+    display: none;
+  }
+  
+  .bar-mobile {
+    @include chart;
+    display: inline-block;
+    margin-top: 3vw;
+  }
+}
+
 @include breakpoint(mobile) {
   .stats {
     margin: 0;
@@ -36,17 +61,12 @@
   }
   
   .pie-chart {
-    width: 95vw;
     @include chart;
+    width: 95vw;
   }
   
   .bar-mobile {
-    display: inline-block;
-    margin-top: 7vw;
     @include chart;
-  }
-
-  .bar {
-    display: none;
+    margin-top: 7vw;
   }
 }

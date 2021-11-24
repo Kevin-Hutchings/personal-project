@@ -64,6 +64,48 @@
   right: 1%;
 }
 
+@media (max-width: 768px) {
+  .preview {
+    height: 40vh;
+    width: 40vw;
+    padding: 20px;
+    margin: 3vh auto;
+    text-align: center;
+  }
+  .preview img {
+    height: 40vh;
+    width: 80%;
+    border: 2px solid black;
+    transition: transform 0.3s;
+  }
+
+  .catalog-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    width: 98vw;
+    font-size: 0.9em;
+    margin: 2vh 1vh 2vh 1.3vw;
+  }
+  .catalog-header .input-container {
+    display: flex;
+    position: unset;
+    left: 25%;
+    width: 40vw;
+    justify-content: space-between;
+  }
+  .catalog-header .input-container input {
+    height: 4vh;
+    width: 38vw;
+  }
+
+  .smash {
+    width: unset;
+    position: unset;
+  }
+}
 @media (max-width: 480px) {
   .preview {
     height: 50vh;
@@ -106,10 +148,5 @@
   }
   .catalog-header .input-container button {
     display: none;
-  }
-
-  .smash {
-    width: unset;
-    position: unset;
   }
 }

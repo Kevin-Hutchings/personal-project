@@ -74,12 +74,60 @@ nav h1 {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   nav {
     position: sticky;
     top: 0;
-    height: 60px;
+    height: 90px;
   }
+  nav button {
+    height: 7.5vh;
+    width: 9vw;
+    font-size: 1em;
+  }
+
+  .nav-buttons {
+    width: 55vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20vw;
+  }
+
+  .user-icon {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    right: 2%;
+    top: 20%;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15vw;
+    position: relative;
+    left: -15%;
+    font-size: 0.65em;
+  }
+  .user-info h2 {
+    display: none;
+  }
+  .user-info .list-toggle {
+    height: 6vh;
+    width: 9vw;
+    font-size: 1.2em;
+  }
+
+  .studio-logo {
+    height: 60px;
+    width: 20vw;
+    position: absolute;
+    left: 1%;
+  }
+}
+@media (max-width: 480px) {
   nav .full-menu {
     display: none;
   }
@@ -122,13 +170,13 @@ nav h1 {
   .user-info {
     position: absolute;
     left: 66%;
-    top: 20%;
+    top: 25%;
   }
   .user-info h2 {
     display: none;
   }
   .user-info .list-toggle {
-    height: 7vh;
+    height: 45px;
     width: 18vw;
     border-radius: 12%;
     background-color: #7e7e7ea8;

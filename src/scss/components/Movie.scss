@@ -50,11 +50,49 @@
   margin: 1.75vh 0 0 3vw;
 }
 
-@include breakpoint(mobile) {
+@include breakpoint(tablet) {
   .movie-title {
     margin: 0 auto;
   }
+
+  .movie-container {
+    width: 95vw;
+    margin: 2vh auto;
   
+    .movie-info {
+      padding: 10px;
+      width: 45vw;
+      display: flex;
+      flex-direction: column;
+      font-size: 1em;
+    }
+  
+    h3 {
+      line-height: 45%;
+    }
+  
+    img {
+      height: 65vh;
+      width: 47vw;
+      border-right: $border-main;
+    }
+  
+    .review-section {
+      border-top: 1px solid white;
+      margin-top: 2vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45vw;
+  
+      h2 {
+        margin-top: 6vh;
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile) {
   .movie-container {
     border: $border-main;
     width: 85vw;
@@ -83,15 +121,7 @@
     }
   
     .review-section {
-      border-top: 1px solid white;
       margin-top: 3vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      h2 {
-        margin-top: 6vh;
-      }
     }
   }
 }

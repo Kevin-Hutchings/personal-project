@@ -1,4 +1,9 @@
 @use "../abstracts" as *;
+@mixin tablet-style {
+  font-size: 1.1em;
+  width: 90vw;
+  padding: 2%;
+}
 
 .history {
   display: flex;
@@ -46,34 +51,35 @@
   transition: 200ms;
 }
 
-@include breakpoint(mobile) {
+@include breakpoint(tablet) {
   .history {
     margin-left: 8%;
     margin-top: 4vh;
 
     .history-about {
-      font-size: 1.1em;
-      justify-content: space-between;
-      align-items: center;
-      width: 90vw;
-      padding: 2%;
-      background-color: $primary-color;
-      border: $border-main;
+      @include tablet-style;
     }
 
     .history-content {
-      width: 90vw;
-      margin-top: 1vh;
-      padding: 2%;
-      background-color: $primary-color;
-      border: $border-main;
+      @include tablet-style;
     }
   }
 
   .history-smash {
-    // display: none;
-    margin-left: unset;
+    margin-left: -4vw;
     width: unset;
     transition: unset;
+  }
+}
+
+@include breakpoint(mobile) {
+  .history {
+    .history-about {
+      font-size: 1em;
+    }
+
+    .history-content {
+      font-size: 1em;
+    }
   }
 }

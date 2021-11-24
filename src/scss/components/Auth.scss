@@ -52,6 +52,47 @@
   }
 }
 
+@include breakpoint(tablet) {
+  .auth-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 7vh auto;
+    padding: 20px;
+    width: 55vw;
+    height: 30vh;
+  
+    input {
+      height: 5vh;
+      width: 50vw;
+      text-align: center;
+      border: $border-main;
+    }
+  
+    .auth-buttons {
+      width: 57vw;
+      justify-content: space-evenly;
+    }
+  
+    button {
+      @include button;
+      width: 15vw;
+    }
+  
+    button:active {
+      background-color: $primary-color;
+    }
+  }
+
+  .welcome {
+    button {
+      @include button;
+      width: 15vw;
+    }
+  }
+}
+
 @include breakpoint(mobile) {
   .auth-form {
     width: 80vw;

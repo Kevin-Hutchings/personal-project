@@ -29,12 +29,13 @@ app.use(
     saveUninitialized: false,
     secret: SESSION_SECRET,
     cookie: {
-      maxAge: 1000 * 60 * 60 * 24,
+      maxAge: 1000 * 60 * 60 * 24, //duration = 1 day
     },
   })
 );
 
 massive({
+  //both values point to the same database (web || local)
   connectionString: DATABASE_URL || CONNECTION_STRING,
   ssl: { rejectUnauthorized: false },
 })
@@ -69,6 +70,6 @@ app.post("/api/review/add/:id", createReview);
 app.delete("/api/review/delete/:id/:userid", deleteReview);
 
 // Hosting
-app.use(express.static(`${__dirname}/../build`))
+app.use(express.static(`${__dirname}/../build`));
 
 app.listen(port, () => console.log(`Listening on ${port}`));

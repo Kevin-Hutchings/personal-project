@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-// import { useSelector, useDispatch } from "react-redux";
 import { UserContext } from "../../context/context";
-// import { ACTIONS } from "../../redux/reviewReducer";
 import axios from "axios";
 import "../../css/components/Review.css";
 
@@ -11,8 +9,6 @@ const Review = (props) => {
   const [review, setReview] = useState("");
   const [input, setInput] = useState("");
   const history = useHistory();
-  // const review = useSelector((state) => state.review.review);
-  // const dispatch = useDispatch();
 
   useEffect(() => {
     try {

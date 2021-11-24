@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ACTIONS } from "../../redux/listReducer";
 import { ToastContainer, toast } from "react-toastify";
 
+// Styling
 import "react-toastify/dist/ReactToastify.css";
 import "../../css/components/Movies.css";
 
@@ -15,7 +16,7 @@ const Movies = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const toggle = useSelector((state) => state.list.toggle);
-  const customId = "custom-id-yes";
+  const customId = "custom-id-yes"; //for toastify, to prevent duplicate popups
 
   useEffect(() => {
     axios

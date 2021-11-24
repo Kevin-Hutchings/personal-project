@@ -27,6 +27,32 @@
   display: none;
 }
 
+@media (max-width: 768px) {
+  .stats {
+    margin: 0 auto;
+    width: 95vw;
+    background-color: #929292;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+
+  .pie-chart {
+    width: 85vw;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .bar {
+    display: none;
+  }
+
+  .bar-mobile {
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 3vw;
+  }
+}
 @media (max-width: 480px) {
   .stats {
     margin: 0;
@@ -36,19 +62,14 @@
   }
 
   .pie-chart {
-    width: 95vw;
     text-align: center;
     text-decoration: underline;
+    width: 95vw;
   }
 
   .bar-mobile {
-    display: inline-block;
-    margin-top: 7vw;
     text-align: center;
     text-decoration: underline;
-  }
-
-  .bar {
-    display: none;
+    margin-top: 7vw;
   }
 }

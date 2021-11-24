@@ -50,6 +50,46 @@
   background-color: #385a7785;
 }
 
+@media (max-width: 768px) {
+  .auth-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 7vh auto;
+    padding: 20px;
+    width: 55vw;
+    height: 30vh;
+  }
+  .auth-form input {
+    height: 5vh;
+    width: 50vw;
+    text-align: center;
+    border: 2px solid black;
+  }
+  .auth-form .auth-buttons {
+    width: 57vw;
+    justify-content: space-evenly;
+  }
+  .auth-form button {
+    height: 5vh;
+    width: 6vw;
+    cursor: pointer;
+    border: 2px solid black;
+    width: 15vw;
+  }
+  .auth-form button:active {
+    background-color: #385a7785;
+  }
+
+  .welcome button {
+    height: 5vh;
+    width: 6vw;
+    cursor: pointer;
+    border: 2px solid black;
+    width: 15vw;
+  }
+}
 @media (max-width: 480px) {
   .auth-form {
     width: 80vw;

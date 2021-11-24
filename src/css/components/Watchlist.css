@@ -52,6 +52,32 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  .watchlist {
+    background-color: #5d7285;
+    width: 50vw;
+    align-items: center;
+    position: fixed;
+    right: 1%;
+    margin-top: 0.5vh;
+  }
+
+  .list-info {
+    width: 43vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2vw;
+    font-size: 1.2em;
+  }
+  .list-info button {
+    height: 3vh;
+    width: 4vw;
+    cursor: pointer;
+    border: 2px solid black;
+  }
+}
 @media (max-width: 480px) {
   .watchlist {
     background-color: #5d7285;
