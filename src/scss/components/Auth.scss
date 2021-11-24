@@ -43,6 +43,10 @@
   flex-direction: column;
   margin: 5vw;
 
+  .user-settings {
+    margin-top: 3vh;
+  }
+
   button {
     @include button;
   }

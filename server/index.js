@@ -8,7 +8,7 @@ const { CONNECTION_STRING, SESSION_SECRET, DATABASE_URL } = process.env;
 
 // Controllers
 const { getMovie, getPreview, getRatings } = require("./controllers/movie");
-const { register, login, logout, getUser } = require("./controllers/auth");
+const { register, login, logout, getUser, deleteUser } = require("./controllers/auth");
 const {
   addTitle,
   removeTitle,
@@ -54,6 +54,7 @@ app.post("/api/auth/register", register);
 app.post("/api/auth/login", login);
 app.get("/api/auth/me", getUser);
 app.post("/api/auth/logout", logout);
+app.delete("/api/auth/destroy/:id", deleteUser);
 
 // Watchlist Endpoints
 app.get("/api/watchlist/:id", getList);

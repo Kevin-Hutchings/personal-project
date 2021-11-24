@@ -24,16 +24,16 @@ const Review = (props) => {
     setInput(val);
   };
 
-  const handleSubmit = async (review, movieid, userid) => {
+  const handleSubmit = (review, movieid, userid) => {
     try {
-      await axios.post(`/api/review/add/${props.id}`, {
+      axios.post(`/api/review/add/${props.id}`, {
         review,
         movieid,
         userid,
       });
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (err) {
+      console.log(err);
+    } 
   };
 
   const handleDelete = (movieid, userid) => {

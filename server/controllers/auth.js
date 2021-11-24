@@ -65,9 +65,19 @@ const getUser = (req, res) => {
   }
 };
 
+const deleteUser = (req, res) => {
+  const { id } = req.params;
+  const db = req.app.get("db");
+
+  db.user.delete_user(id)
+  .then(res.sendStatus(200))
+  .catch(err => res.status(404).send(err))
+}
+
 module.exports = {
   register,
   login,
   logout,
   getUser,
+  deleteUser,
 };

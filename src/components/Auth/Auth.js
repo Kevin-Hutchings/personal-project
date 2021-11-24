@@ -3,6 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import authReducer, { initialState, ACTIONS } from "../../redux/authReducer";
 import { useUserContext } from "./../../context/context";
+import UserSettings from "./UserSettings";
 import "../../css/components/Auth.css";
 
 const Auth = () => {
@@ -20,7 +21,7 @@ const Auth = () => {
         password,
       });
       dispatch({ type: ACTIONS.REGISTER, payload: { data: req.data } });
-      history.goBack();
+      history.push("/auth");
     } catch (err) {
       console.log(err);
     }
@@ -54,6 +55,7 @@ const Auth = () => {
         <div className="welcome">
           <h1> Welcome, {user.username}! </h1>
           <button onClick={logout}> Logout</button>
+          <UserSettings />
         </div>
       ) : (
         <form className="auth-form">
