@@ -48,6 +48,12 @@ const Watchlist = () => {
     }
   };
 
+  const handleToggle = () => {
+    dispatch({
+      type: ACTIONS.TOGGLE,
+    });
+  };
+
   const listMap = list.map((movie, index) => {
     return (
       <ul className="list-info">
@@ -64,7 +70,8 @@ const Watchlist = () => {
       {toggle ? (
         <div className="watchlist">
           <div>
-            <h2>Watchlist:</h2>
+              <button className="list-close" onClick={handleToggle}>x</button>
+              <h2>Watchlist:</h2>
             <div>{listMap}</div>
           </div>
         </div>

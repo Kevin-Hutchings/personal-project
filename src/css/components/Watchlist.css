@@ -1,7 +1,9 @@
 .watchlist {
   background-color: #385a7785;
   display: flex;
-  width: 19vw;
+  width: 20vw;
+  height: 65vh;
+  overflow: scroll;
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
@@ -12,6 +14,12 @@
   border: 2px solid black;
   color: white;
   text-decoration: none;
+}
+.watchlist .list-close {
+  position: absolute;
+  left: 1%;
+  top: 0.5%;
+  border: 2px solid black;
 }
 .watchlist h2 {
   text-decoration: underline;
@@ -55,11 +63,13 @@
 @media (max-width: 768px) {
   .watchlist {
     background-color: #5d7285;
-    width: 50vw;
+    width: 55vw;
+    height: 70vh;
     align-items: center;
     position: fixed;
     right: 1%;
     margin-top: 0.5vh;
+    overflow: scroll;
   }
 
   .list-info {
@@ -81,12 +91,13 @@
 @media (max-width: 480px) {
   .watchlist {
     background-color: #5d7285;
-    width: 75vw;
+    width: 70vw;
     align-items: center;
     position: fixed;
     right: 1%;
     margin-top: 0.5vh;
     animation: fadeIn linear 750ms;
+    overflow: scroll;
   }
 
   .list-info {

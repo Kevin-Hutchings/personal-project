@@ -39,10 +39,10 @@ const UserSettings = () => {
   };
 
   return (
-    <div className="user-settings">
+    <div className="settings-container">
       <button onClick={handleToggle}>Settings</button>
       {toggle ? (
-        <form>
+        <div className="user-settings">
           <div>
             <input
               type="email"
@@ -65,7 +65,7 @@ const UserSettings = () => {
               }
             }}
           >Delete</button>
-        </form>
+        </div>
       ) : null}
     </div>
   );

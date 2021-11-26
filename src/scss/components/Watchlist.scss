@@ -3,7 +3,9 @@
 .watchlist {
   background-color: $primary-color;
   display: flex;
-  width: 19vw;
+  width: 20vw;
+  height: 65vh;
+  overflow: scroll;
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
@@ -14,6 +16,13 @@
   border: $border-main;
   color: white;
   text-decoration: none;
+
+  .list-close {
+    position: absolute;
+    left: 1%;
+    top: 0.5%;
+    border: $border-main;
+  }
 
   h2 {
     text-decoration: underline;
@@ -62,11 +71,13 @@
 @include breakpoint(tablet) {
   .watchlist {
     background-color: $mobile-blue;
-    width: 50vw;
+    width: 55vw;
+    height: 70vh;
     align-items: center;
     position: fixed;
     right: 1%;
     margin-top: 0.5vh;
+    overflow: scroll;
   }
 
   .list-info {
@@ -90,12 +101,13 @@
 @include breakpoint(mobile) {
   .watchlist {
     background-color: $mobile-blue;
-    width: 75vw;
+    width: 70vw;
     align-items: center;
     position: fixed;
     right: 1%;
     margin-top: 0.5vh;
     animation: fadeIn linear 750ms;
+    overflow: scroll;
   }
 
   .list-info {
