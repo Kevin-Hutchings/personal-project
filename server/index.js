@@ -2,13 +2,19 @@ require("dotenv").config();
 const massive = require("massive");
 const express = require("express");
 const session = require("express-session");
-const path = require("path");
 const port = process.env.PORT || 4242;
 const { CONNECTION_STRING, SESSION_SECRET, DATABASE_URL } = process.env;
 
 // Controllers
 const { getMovie, getPreview, getRatings } = require("./controllers/movie");
-const { register, login, logout, getUser, deleteUser } = require("./controllers/auth");
+const {
+  register,
+  login,
+  logout,
+  getUser,
+  deleteUser,
+  updateEmail,
+} = require("./controllers/auth");
 const {
   addTitle,
   removeTitle,
@@ -53,6 +59,7 @@ app.get("/api/movie/:id", getMovie);
 app.post("/api/auth/register", register);
 app.post("/api/auth/login", login);
 app.get("/api/auth/me", getUser);
+app.put("/api/auth/update/:id", updateEmail);
 app.post("/api/auth/logout", logout);
 app.delete("/api/auth/destroy/:id", deleteUser);
 

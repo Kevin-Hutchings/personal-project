@@ -21,7 +21,7 @@ const Auth = () => {
         password,
       });
       dispatch({ type: ACTIONS.REGISTER, payload: { data: req.data } });
-      history.push("/auth");
+      history.go(0);
     } catch (err) {
       console.log(err);
     }
@@ -55,7 +55,9 @@ const Auth = () => {
         <div className="welcome">
           <h1> Welcome, {user.username}! </h1>
           <button onClick={logout}> Logout</button>
-          <UserSettings />
+          <div>
+            <UserSettings />
+          </div>
         </div>
       ) : (
         <form className="auth-form">

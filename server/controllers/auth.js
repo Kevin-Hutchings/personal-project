@@ -65,14 +65,28 @@ const getUser = (req, res) => {
   }
 };
 
-const deleteUser = (req, res) => {
+const deleteUser = async (req, res) => {
   const { id } = req.params;
   const db = req.app.get("db");
+  try {
+    await db.user.delete_user(id);
+    req.session.destroy();
+    res.sendStatus(200);
+  } catch (err) {
+    res.status(404).send(err);
+  }
+};
 
-  db.user.delete_user(id)
-  .then(res.sendStatus(200))
-  .catch(err => res.status(404).send(err))
-}
+const updateEmail = (req, res) => {
+  const { id } = req.params;
+  const { email } = req.body;
+  const db = req.app.get("db");
+
+  db.user
+    .update_email(id, email)
+    .then((data) => res.status(200).send(data))
+    .catch((err) => res.status(404).send(err));
+};
 
 module.exports = {
   register,
@@ -80,4 +94,5 @@ module.exports = {
   logout,
   getUser,
   deleteUser,
+  updateEmail,
 };

@@ -33,7 +33,7 @@ const Review = (props) => {
       });
     } catch (err) {
       console.log(err);
-    } 
+    }
   };
 
   const handleDelete = (movieid, userid) => {

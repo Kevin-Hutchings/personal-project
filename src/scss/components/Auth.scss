@@ -38,14 +38,10 @@
 
 .welcome {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   margin: 5vw;
-
-  .user-settings {
-    margin-top: 3vh;
-  }
 
   button {
     @include button;
@@ -53,6 +49,30 @@
 
   button:active {
     background-color: $primary-color;
+  }
+}
+
+.user-settings {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+
+  form {
+    margin: 3vh auto;
+    height: 30vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  input {
+    height: 4vh;
+    border: $border-main;
+    margin-right: 1vw;
   }
 }
 
