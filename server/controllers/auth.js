@@ -69,6 +69,8 @@ const deleteUser = async (req, res) => {
   const { id } = req.params;
   const db = req.app.get("db");
   try {
+    await db.watchlist.delete_list(id);
+    await db.review.delete_user_reviews(id);
     await db.user.delete_user(id);
     req.session.destroy();
     res.sendStatus(200);

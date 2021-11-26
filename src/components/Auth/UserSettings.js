@@ -54,17 +54,18 @@ const UserSettings = () => {
             </button>
           </div>
           <ToastContainer position="bottom-right" autoClose={2300} />
-          {/* <button onClick={handleDelete}>Delete Account</button> */}
           <button
             onClick={() => {
               const confirmBox = window.confirm(
-                "Do you really want to delete this account?"
+                "This will permanently delete your account, as well as any associated reviews and watchlist items. Are you sure?"
               );
-              if (confirmBox === true) {
+              if (confirmBox) {
                 handleDelete();
               }
             }}
-          >Delete</button>
+          >
+            Delete Account
+          </button>
         </div>
       ) : null}
     </div>

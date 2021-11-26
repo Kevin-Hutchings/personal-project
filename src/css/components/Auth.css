@@ -64,7 +64,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  background-color: #385a7785;
+  border: 2px solid black;
+  border-radius: 25px 10px;
 }
 .settings-container input {
   height: 4vh;
