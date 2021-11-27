@@ -1,4 +1,5 @@
 const bcrypt = require("bcryptjs");
+const nodemailer = require("./nodemailerAPI");
 
 const register = async (req, res) => {
   const { username, email, password } = req.body;
@@ -18,6 +19,7 @@ const register = async (req, res) => {
         username: user.username,
         email: user.email,
       };
+      nodemailer.main(email);
       res.status(201).json(req.session.user);
     }
   } catch (err) {
@@ -84,10 +86,17 @@ const updateEmail = (req, res) => {
   const { email } = req.body;
   const db = req.app.get("db");
 
-  db.user
-    .update_email(id, email)
-    .then((data) => res.status(200).send(data))
-    .catch((err) => res.status(404).send(err));
+  try {
+    db.user.update_email(id, email);
+    nodemailer.main(email);
+    res.sendStatus(200);
+  } catch (err) {
+    res.status(404).send(console.log(err));
+  }
+  // db.user
+  //   .update_email(id, email)
+  //   .then((data) => res.status(200).send(data))
+  //   .catch((err) => res.status(404).send(err));
 };
 
 module.exports = {

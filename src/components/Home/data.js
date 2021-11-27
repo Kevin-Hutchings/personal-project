@@ -15,6 +15,6 @@ export const homeData = [
   {
     title: "Content Attribution",
     content:
-      "The movie images are from Wikipedia.  The movie synopses are from MAL.",
+      "The movie images and history information are from Wikipedia.  The movie synopses are from MAL.",
   },
 ];

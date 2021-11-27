@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
 }
+.home header {
+  margin: 1vh;
+}
 .home h2 {
   text-decoration: underline;
 }
@@ -35,6 +38,10 @@
   }
 }
 @media (max-width: 480px) {
+  .home h2 {
+    text-align: center;
+  }
+
   .home-info {
     width: 80vw;
     padding: 3%;

@@ -4,6 +4,7 @@ import "../../css/components/Home.css";
 
 const dataMap = homeData.map((el, index) => {
   const { title, content, content2, content3 } = el;
+
   return (
     <div className="home-info">
       <h2 key={index}>{title}</h2>
