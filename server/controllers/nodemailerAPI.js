@@ -25,7 +25,7 @@ const main = async (email) => {
   let info = await transporter.sendMail({
     from: 'Project-Ghibli <ktmhutchings@gmail.com>',
     to: email,
-    subject: "Hello",
+    subject: "Test Email",
     text: "Thanks for visiting Project-Ghibli.  This email is for demonstration purposes only.", // plain text body
     html: "<p>Thanks for visiting <b>Project-Ghibli</b>.  This email is for demonstration purposes only</p>.", // html body
   });
@@ -34,7 +34,7 @@ const main = async (email) => {
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 }
 
-main().catch(console.error);
+main().catch(err => console.log(err));
 
 module.exports = {
   main,

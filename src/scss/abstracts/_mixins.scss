@@ -12,6 +12,12 @@
   border: $border-main;
 }
 
+@mixin main-theme {
+  background-color: $secondary-color;
+  border: $border-main;
+  border-radius: 15px;
+}
+
 @mixin breakpoint($point) {
   @if $point == mobile {
     @media (max-width: 480px) {

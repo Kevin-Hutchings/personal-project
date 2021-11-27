@@ -72,10 +72,16 @@
     border-radius: 25px 10px;
   }
 
-  input {
-    height: 4vh;
-    border: $border-main;
-    margin-right: 1vw;
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      height: 4vh;
+      border: $border-main;
+      margin-right: 1vw;
+    }
   }
 }
 
@@ -118,6 +124,14 @@
       width: 15vw;
     }
   }
+
+  .settings-container {
+    width: 70vw;
+
+    .user-settings {
+      width: 50vw;
+    }
+  }
 }
 
 @include breakpoint(mobile) {
@@ -146,6 +160,14 @@
   .welcome {
     button {
       width: 20vw;
+    }
+  }
+
+  .settings-container {
+    width: 95vw;
+
+    .user-settings {
+      width: 90vw;
     }
   }
 }

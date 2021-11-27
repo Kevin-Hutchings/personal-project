@@ -1,0 +1,57 @@
+@use "../abstracts" as *;
+
+h1 {
+  text-align: center;
+}
+
+.player-container {
+  @include main-theme;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 5vh;
+  width: 85vw;
+  justify-content: space-around;
+  padding: 1%;
+
+  .player {
+    margin-top: 5vh;
+  }
+
+  .player-mobile {
+    display: none;
+  }
+}
+
+@include breakpoint(tablet) {
+  .player-container {
+    flex-direction: column;
+    width: 95vw;
+
+    .player {
+      margin-top: 3vh;
+    }
+    .player-mobile{
+      display: none;
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .player-container {
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0;
+
+    .player-mobile {
+      display: flex;
+      padding: 1%;
+      margin-top: 1vh;
+    }
+
+    .player {
+      display: none;
+    }
+  }
+}

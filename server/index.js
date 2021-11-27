@@ -36,6 +36,7 @@ app.use(
     secret: SESSION_SECRET,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24, //duration = 1 day
+      sameSite: 'none',
     },
   })
 );

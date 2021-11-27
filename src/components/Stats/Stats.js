@@ -8,7 +8,7 @@ const Stats = () => {
   return (
     <div className="stats">
       <div className="pie-chart">
-        <h1>Watchlist Occurences</h1>
+        <h1>Top 10 Watchlist Occurences</h1>
         <ListChart />
       </div>
 

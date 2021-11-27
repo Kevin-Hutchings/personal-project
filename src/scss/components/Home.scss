@@ -16,19 +16,17 @@
 }
 
 .info-container {
-  background-color: $secondary-color;
+  @include main-theme;
   width: 90vw;
-  border: $border-main;
-  border-radius: 15px;
 }
 
 .home-info {
   width: 70vw;
   background-color: $primary-color;
   border: $border-main;
+  border-radius: 15px;
   padding: 1%;
   margin: 5vh auto;
-  border-radius: 15px;
 }
 
 @include breakpoint(tablet) {

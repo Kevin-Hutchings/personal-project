@@ -14,8 +14,8 @@ export const Menu = () => {
       <Link to="/history">
         <button> History </button>
       </Link>
-      <Link to="/music">
-        <button> Music </button>
+      <Link to="/previews">
+        <button> Previews </button>
       </Link>
       <Link to="/stats">
         <button> Stats </button>

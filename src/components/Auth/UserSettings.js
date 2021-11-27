@@ -43,8 +43,9 @@ const UserSettings = () => {
       <button onClick={handleToggle}>Settings</button>
       {toggle ? (
         <div className="user-settings">
-          <div>
+          <div className="input-container">
             <input
+              placeholder="Enter Email"
               type="email"
               value={email}
               onChange={(e) => updateEmail(e.target.value)}
