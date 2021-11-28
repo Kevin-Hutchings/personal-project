@@ -7,22 +7,18 @@ const urls = [
   "https://youtu.be/VklP7yoHTYg",
   "https://youtu.be/NsqlYonyuFE",
   "https://youtu.be/YLn-aKsFHpc",
+  "https://youtu.be/TK1Ij_-mank",
+  "https://youtu.be/QF2P0wJ9PA4",
 ];
 
 const playerMap = urls.map((url, index) => {
   return (
     <div>
-      <div className="player">
-        <ReactPlayer url={url} controls={true} key={index} />
+      <div className="player" key={index}>
+        <ReactPlayer url={url} controls={true} />
       </div>
-      <div className="player-mobile">
-        <ReactPlayer
-          url={url}
-          controls={true}
-          width="95vw"
-          height="35vh"
-          key={index}
-        />
+      <div className="player-mobile" key={index}>
+        <ReactPlayer url={url} controls={true} width="95vw" height="35vh" />
       </div>
     </div>
   );
@@ -31,7 +27,7 @@ const playerMap = urls.map((url, index) => {
 const Previews = () => {
   return (
     <div>
-      <h1>Movie Previews</h1>
+      <h1>Previews and Music</h1>
       <div className="player-container">{playerMap}</div>
     </div>
   );

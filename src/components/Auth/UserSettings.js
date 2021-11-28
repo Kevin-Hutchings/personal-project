@@ -19,7 +19,7 @@ const UserSettings = () => {
     try {
       axios.delete(`/api/auth/destroy/${user.id}`);
       setUser({});
-      history.push("/home");
+      history.push("/");
     } catch (err) {
       console.log(err);
     }
@@ -31,11 +31,11 @@ const UserSettings = () => {
 
   const handleEmailUpdate = (email) => {
     try {
-      if(email !== "") {
+      if (email !== "") {
         axios.put(`/api/auth/update/${user.id}`, { email });
-        toast.success("Email updated");
+        toast.success("Email updated - check your inbox for a new email from Project Ghibli");
         setEmail("");
-      } else toast.error("Please enter a valid email address.")
+      } else toast.error("Please enter a valid email address.");
     } catch (err) {
       console.log(err);
     }
@@ -63,34 +63,35 @@ const UserSettings = () => {
               onChange={(e) => updateEmail(e.target.value)}
             />
             <div className="email-buttons">
-              <button onClick={() => handleEmailUpdate(email)}>
-                Update
+              <button onClick={() => handleEmailUpdate(email)}>Update</button>
+              <button
+                onClick={() => {
+                  const confirmBox = window.confirm(
+                    "Select OK if you want to remove your email address from the database."
+                  );
+                  if (confirmBox) {
+                    removeEmail();
+                  }
+                }}
+              >
+                Delete
               </button>
-              <button onClick={() => {
-              const confirmBox = window.confirm(
-                "Select OK if you want to remove your email address from the database."
-              );
-              if (confirmBox) {
-                removeEmail();
-              }
-            }}>Delete</button>
             </div>
           </div>
           <ToastContainer position="bottom-right" autoClose={2300} />
           <div className="delete-account">
-          <button
-            onClick={() => {
-              const confirmBox = window.confirm(
-                "This will permanently delete your account, as well as any associated reviews and watchlist items. Are you sure?"
-              );
-              if (confirmBox) {
-                handleDelete();
-              }
-            }}
-          >
-            Delete Account
-          </button>
-
+            <button
+              onClick={() => {
+                const confirmBox = window.confirm(
+                  "This will permanently delete your account, as well as any associated reviews and watchlist items. Are you sure?"
+                );
+                if (confirmBox) {
+                  handleDelete();
+                }
+              }}
+            >
+              Delete Account
+            </button>
           </div>
         </div>
       ) : null}

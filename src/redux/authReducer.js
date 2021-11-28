@@ -28,19 +28,21 @@ const authReducer = (state = initialState, action) => {
       };
     case ACTIONS.REGISTER: {
       const { data } = action.payload;
+      const { username, email, password } = data;
       return {
         ...state,
-        username: data.username,
-        email: data.email,
-        password: data.password,
+        username,
+        email,
+        password,
       };
     }
     case ACTIONS.LOGIN: {
       const { data } = action.payload;
+      const { username, password } = data;
       return {
         ...state,
-        username: data.username,
-        password: data.password,
+        username,
+        password,
       };
     }
     case ACTIONS.GET_USER: {

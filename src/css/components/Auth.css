@@ -89,6 +89,7 @@
     cursor: pointer;
     border: 2px solid black;
     width: 15vw;
+    height: 35px;
   }
 }
 @media (max-width: 480px) {
@@ -113,5 +114,6 @@
 
   .welcome button {
     width: 20vw;
+    height: 30px;
   }
 }

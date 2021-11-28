@@ -4,6 +4,7 @@
   width: 20vw;
   height: 65vh;
   overflow: scroll;
+  overflow-y: none;
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;

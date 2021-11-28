@@ -37,7 +37,7 @@
   width: 6vw;
 }
 .settings-container .input-container .email-buttons button:active {
-  background-color: #525252;
+  background-color: #ff4d4d;
   color: white;
 }
 .settings-container .input-container input {
@@ -58,21 +58,22 @@
   }
   .settings-container .user-settings {
     width: 65vw;
-    height: 40vh;
+    height: 300px;
   }
   .settings-container .input-container {
     width: 60vw;
-    height: 15vh;
+    height: 150px;
   }
   .settings-container .input-container input {
     width: 43vw;
+    height: 40px;
   }
   .settings-container .input-container .email-buttons {
     width: 40vw;
   }
   .settings-container .input-container .email-buttons button {
     width: 15vw;
-    height: 5vh;
+    height: 35px;
   }
 }
 @media (max-width: 480px) {
@@ -81,19 +82,23 @@
   }
   .settings-container .user-settings {
     width: 85vw;
+    height: 250px;
   }
   .settings-container .input-container {
     width: 75vw;
-    height: 15vh;
   }
   .settings-container .input-container input {
     width: 55vw;
+    height: 35px;
   }
   .settings-container .input-container .email-buttons {
     width: 55vw;
   }
   .settings-container .input-container .email-buttons button {
     width: 20vw;
-    height: 5vh;
+    height: 35px;
+  }
+  .settings-container .delete-account button {
+    height: 35px;
   }
 }

@@ -3,14 +3,12 @@ import { UserContext } from "../../context/context";
 import axios from "axios";
 import Review from "../Review/Review";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router";
 import "../../css/components/Movie.css";
 
 const Movie = (props) => {
   const [movie, setMovie] = useState([]);
   const { user } = useContext(UserContext);
   const toggle = useSelector((state) => state.list.toggle);
-  const { pathname } = useLocation();
 
   useEffect(() => {
     try {
@@ -21,7 +19,7 @@ const Movie = (props) => {
     } catch (err) {
       console.log(err);
     }
-  }, [props.match.params.id, pathname]);
+  }, [props.match.params.id]);
 
   return (
     <div>

@@ -3,7 +3,7 @@
 .movie-title {
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
+  margin: 2vh;
 }
 
 .movie-container {
@@ -78,16 +78,8 @@
     }
   
     .review-section {
-      border-top: 1px solid white;
       margin-top: 2vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 45vw;
-  
-      h2 {
-        margin-top: 6vh;
-      }
     }
   }
 }
@@ -121,6 +113,7 @@
     }
   
     .review-section {
+      width: 80vw;
       margin-top: 3vh;
     }
   }

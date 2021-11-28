@@ -41,7 +41,7 @@
       }
 
       button:active {
-        background-color: $secondary-color;
+        background-color: $red;
         color: white;
       }
     }
@@ -57,7 +57,7 @@
 
   .delete-account {
     button:active {
-      background-color: #ff4d4d;
+      background-color: $red;
       color: white;
     }
   }
@@ -69,15 +69,16 @@
 
     .user-settings {
       width: 65vw;
-      height: 40vh;
+      height: 300px;
     }
 
     .input-container {
       width: 60vw;
-      height: 15vh;
+      height: 150px;
 
       input {
         width: 43vw;
+        height: 40px;
       }
 
       .email-buttons {
@@ -85,7 +86,7 @@
 
         button {
           width: 15vw;
-          height: 5vh;
+          height: 35px;
         }
       }
     }
@@ -98,14 +99,15 @@
 
     .user-settings {
       width: 85vw;
+      height: 250px;
     }
 
     .input-container {
       width: 75vw;
-      height: 15vh;
 
       input {
         width: 55vw;
+        height: 35px;
       }
 
       .email-buttons {
@@ -113,8 +115,14 @@
 
         button {
           width: 20vw;
-          height: 5vh;
+          height: 35px;
         }
+      }
+    }
+
+    .delete-account {
+      button {
+        height: 35px;
       }
     }
   }

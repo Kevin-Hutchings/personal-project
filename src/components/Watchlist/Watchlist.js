@@ -70,8 +70,10 @@ const Watchlist = () => {
       {toggle ? (
         <div className="watchlist">
           <div>
-              <button className="list-close" onClick={handleToggle}>x</button>
-              <h2>Watchlist:</h2>
+            <button className="list-close" onClick={handleToggle}>
+              x
+            </button>
+            <h2>Watchlist:</h2>
             <div>{listMap}</div>
           </div>
         </div>

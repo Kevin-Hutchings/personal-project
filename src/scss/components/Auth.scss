@@ -90,6 +90,7 @@
     button {
       @include button;
       width: 15vw;
+      height: 35px;
     }
   }
 }
@@ -120,6 +121,7 @@
   .welcome {
     button {
       width: 20vw;
+      height: 30px;
     }
   }
 }

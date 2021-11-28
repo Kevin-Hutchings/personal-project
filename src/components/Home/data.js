@@ -9,12 +9,12 @@ export const homeData = [
   {
     title: "Tech Stack",
     content: "Project-Ghibli was made using the following:",
-    content2: "React, NodeJS, Express, Postgres, Axios, SASS/SCSS, ChartJS, react-player, react-toastify and Nodemailer",
+    content2: "React, NodeJS, Express, Postgres, Axios, SASS/SCSS, ChartJS, Nodemailer, react-player, and react-toastify.",
     content3: "The database and site hosting are both handled by Heroku.",
   },
   {
     title: "Content Attribution",
     content:
-      "The movie images and history information are from Wikipedia.  The movie synopses are from MAL.",
+      "Movie images and History information are from Wikipedia. Movie synopses are from MAL.  Movie previews are from Youtube.",
   },
 ];

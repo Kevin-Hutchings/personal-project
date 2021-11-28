@@ -16,7 +16,7 @@ h1 {
   padding: 1%;
 }
 .player-container .player {
-  margin-top: 5vh;
+  margin: 3vh;
 }
 .player-container .player-mobile {
   display: none;
@@ -26,9 +26,6 @@ h1 {
   .player-container {
     flex-direction: column;
     width: 95vw;
-  }
-  .player-container .player {
-    margin-top: 3vh;
   }
   .player-container .player-mobile {
     display: none;
@@ -43,7 +40,7 @@ h1 {
   .player-container .player-mobile {
     display: flex;
     padding: 1%;
-    margin-top: 2vh;
+    margin: 1vh;
   }
   .player-container .player {
     display: none;
