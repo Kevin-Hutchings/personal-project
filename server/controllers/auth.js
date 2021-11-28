@@ -70,9 +70,10 @@ const getUser = (req, res) => {
 const deleteUser = async (req, res) => {
   const { id } = req.params;
   const db = req.app.get("db");
+  
   try {
-    await db.watchlist.delete_list(id);
     await db.review.delete_user_reviews(id);
+    await db.watchlist.delete_list(id);
     await db.user.delete_user(id);
     req.session.destroy();
     res.sendStatus(200);
@@ -87,9 +88,11 @@ const updateEmail = (req, res) => {
   const db = req.app.get("db");
 
   try {
-    db.user.update_email(id, email);
-    nodemailer.main(email);
-    res.sendStatus(200);
+    if (email !== "") {
+      db.user.update_email(id, email);
+      nodemailer.main(email);
+      res.sendStatus(200);
+    } 
   } catch (err) {
     res.status(404).send(err);
   }
@@ -97,15 +100,15 @@ const updateEmail = (req, res) => {
 
 const removeEmail = (req, res) => {
   const { id } = req.params;
-  const db = req.app.get('db')
+  const db = req.app.get("db");
 
   try {
-    db.user.update_email(id)
-    res.sendStatus(200)
+    db.user.clear_email(id);
+    res.sendStatus(200);
   } catch (err) {
-    res.status(404).send(err)
+    res.status(404).send(err);
   }
-}
+};
 
 module.exports = {
   register,

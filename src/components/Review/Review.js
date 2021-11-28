@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { UserContext } from "../../context/context";
 import axios from "axios";
 import "../../css/components/Review.css";
@@ -9,6 +9,7 @@ const Review = (props) => {
   const [review, setReview] = useState("");
   const [input, setInput] = useState("");
   const history = useHistory();
+  const params = new URLSearchParams(window.location.search);
 
   useEffect(() => {
     try {
@@ -19,6 +20,17 @@ const Review = (props) => {
       console.log(e);
     }
   }, [props.id, user.id]);
+
+  useEffect(() => {
+    if (params.has("review")) {
+      params.delete("review");
+      window.history.pushState(
+        {},
+        "",
+        `/#${params.toString()}/movie/${props.id}`
+      );
+    }
+  });
 
   const handleInput = (val) => {
     setInput(val);
@@ -43,8 +55,8 @@ const Review = (props) => {
         userid,
       });
       history.go(0);
-    } catch (e) {
-      console.log(e);
+    } catch (err) {
+      console.log(err);
     }
   };
 

@@ -27,7 +27,7 @@ const main = async (email) => {
     to: email,
     subject: "Test Email",
     text: "Thanks for visiting Project-Ghibli.  This email is for demonstration purposes only.", // plain text body
-    html: "<p>Thanks for visiting <b>Project-Ghibli</b>.  This email is for demonstration purposes only</p>.", // html body
+    html: "<p>Thanks for visiting <b>Project-Ghibli</b>.  This email is for demonstration purposes only.</p>", // html body
   });
 
   console.log("Message sent: %s", info.messageId);

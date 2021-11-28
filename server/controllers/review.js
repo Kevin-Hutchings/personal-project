@@ -12,6 +12,7 @@ const createReview = (req, res) => {
 const getReview = (req, res) => {
   const { id, userid } = req.params;
   const db = req.app.get("db");
+
   db.review
     .get_review(id, userid)
     .then((data) => res.status(200).send(data))
@@ -21,6 +22,7 @@ const getReview = (req, res) => {
 const deleteReview = (req, res) => {
   const { id, userid } = req.params;
   const db = req.app.get("db");
+  
   db.review
     .delete_review(id, userid)
     .then(() => res.sendStatus(200))

@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useContext, useState } from "react";
+import axios from "axios";
 import { UserContext } from "../../context/context";
 import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -31,9 +31,11 @@ const UserSettings = () => {
 
   const handleEmailUpdate = (email) => {
     try {
-      axios.put(`/api/auth/update/${user.id}`, { email });
-      toast.success("Email updated");
-      setEmail("");
+      if(email !== "") {
+        axios.put(`/api/auth/update/${user.id}`, { email });
+        toast.success("Email updated");
+        setEmail("");
+      } else toast.error("Please enter a valid email address.")
     } catch (err) {
       console.log(err);
     }
@@ -41,7 +43,7 @@ const UserSettings = () => {
 
   const removeEmail = () => {
     try {
-      axios.put(`/api/auth/update/${user.id}`);
+      axios.put(`/api/auth/remove/${user.id}`);
       toast.success("Email removed from database!");
     } catch (err) {
       console.log(err);
