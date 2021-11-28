@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/context";
 import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import "../../css/components/Auth.css";
+import "../../css/components/Settings.css";
 
 const UserSettings = () => {
   const [toggle, setToggle] = useState(false);
@@ -33,6 +33,16 @@ const UserSettings = () => {
     try {
       axios.put(`/api/auth/update/${user.id}`, { email });
       toast.success("Email updated");
+      setEmail("");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const removeEmail = () => {
+    try {
+      axios.put(`/api/auth/update/${user.id}`);
+      toast.success("Email removed from database!");
     } catch (err) {
       console.log(err);
     }
@@ -50,11 +60,22 @@ const UserSettings = () => {
               value={email}
               onChange={(e) => updateEmail(e.target.value)}
             />
-            <button onClick={() => handleEmailUpdate(email)}>
-              Update Email
-            </button>
+            <div className="email-buttons">
+              <button onClick={() => handleEmailUpdate(email)}>
+                Update
+              </button>
+              <button onClick={() => {
+              const confirmBox = window.confirm(
+                "Select OK if you want to remove your email address from the database."
+              );
+              if (confirmBox) {
+                removeEmail();
+              }
+            }}>Delete</button>
+            </div>
           </div>
           <ToastContainer position="bottom-right" autoClose={2300} />
+          <div className="delete-account">
           <button
             onClick={() => {
               const confirmBox = window.confirm(
@@ -67,6 +88,8 @@ const UserSettings = () => {
           >
             Delete Account
           </button>
+
+          </div>
         </div>
       ) : null}
     </div>

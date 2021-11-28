@@ -1,0 +1,99 @@
+.settings-container {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+}
+.settings-container .user-settings {
+  margin: 3vh auto;
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #385a7785;
+  border: 2px solid black;
+  border-radius: 25px 10px;
+}
+.settings-container .input-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 22vw;
+  height: 15vh;
+  padding: 1%;
+  border-bottom: 2px solid black;
+}
+.settings-container .input-container .email-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 15vw;
+}
+.settings-container .input-container .email-buttons button {
+  height: 4vh;
+  width: 6vw;
+}
+.settings-container .input-container .email-buttons button:active {
+  background-color: #525252;
+  color: white;
+}
+.settings-container .input-container input {
+  height: 4vh;
+  width: 15vw;
+  border: 2px solid black;
+  margin: 0 auto;
+  text-align: center;
+}
+.settings-container .delete-account button:active {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    width: 70vw;
+  }
+  .settings-container .user-settings {
+    width: 65vw;
+    height: 40vh;
+  }
+  .settings-container .input-container {
+    width: 60vw;
+    height: 15vh;
+  }
+  .settings-container .input-container input {
+    width: 43vw;
+  }
+  .settings-container .input-container .email-buttons {
+    width: 40vw;
+  }
+  .settings-container .input-container .email-buttons button {
+    width: 15vw;
+    height: 5vh;
+  }
+}
+@media (max-width: 480px) {
+  .settings-container {
+    width: 90vw;
+  }
+  .settings-container .user-settings {
+    width: 85vw;
+  }
+  .settings-container .input-container {
+    width: 75vw;
+    height: 15vh;
+  }
+  .settings-container .input-container input {
+    width: 55vw;
+  }
+  .settings-container .input-container .email-buttons {
+    width: 55vw;
+  }
+  .settings-container .input-container .email-buttons button {
+    width: 20vw;
+    height: 5vh;
+  }
+}

@@ -91,13 +91,21 @@ const updateEmail = (req, res) => {
     nodemailer.main(email);
     res.sendStatus(200);
   } catch (err) {
-    res.status(404).send(console.log(err));
+    res.status(404).send(err);
   }
-  // db.user
-  //   .update_email(id, email)
-  //   .then((data) => res.status(200).send(data))
-  //   .catch((err) => res.status(404).send(err));
 };
+
+const removeEmail = (req, res) => {
+  const { id } = req.params;
+  const db = req.app.get('db')
+
+  try {
+    db.user.update_email(id)
+    res.sendStatus(200)
+  } catch (err) {
+    res.status(404).send(err)
+  }
+}
 
 module.exports = {
   register,
@@ -106,4 +114,5 @@ module.exports = {
   getUser,
   deleteUser,
   updateEmail,
+  removeEmail,
 };

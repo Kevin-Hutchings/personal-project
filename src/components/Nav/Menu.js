@@ -11,11 +11,11 @@ export const Menu = () => {
       <Link to="/movies">
         <button> Movies </button>
       </Link>
-      <Link to="/history">
-        <button> History </button>
-      </Link>
       <Link to="/previews">
         <button> Previews </button>
+      </Link>
+      <Link to="/history">
+        <button> History </button>
       </Link>
       <Link to="/stats">
         <button> Stats </button>

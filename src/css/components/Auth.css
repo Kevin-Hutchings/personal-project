@@ -38,46 +38,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5vw;
+  margin: 2vw;
 }
 .welcome button {
   height: 5vh;
   width: 6vw;
   cursor: pointer;
   border: 2px solid black;
+  margin-top: 3vh;
 }
 .welcome button:active {
   background-color: #385a7785;
-}
-
-.settings-container {
-  margin-top: 3vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30vw;
-}
-.settings-container .user-settings {
-  margin: 3vh auto;
-  height: 30vh;
-  width: 25vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #385a7785;
-  border: 2px solid black;
-  border-radius: 25px 10px;
-}
-.settings-container .input-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.settings-container .input-container input {
-  height: 4vh;
-  border: 2px solid black;
-  margin-right: 1vw;
 }
 
 @media (max-width: 768px) {
@@ -119,13 +90,6 @@
     border: 2px solid black;
     width: 15vw;
   }
-
-  .settings-container {
-    width: 70vw;
-  }
-  .settings-container .user-settings {
-    width: 50vw;
-  }
 }
 @media (max-width: 480px) {
   .auth-form {
@@ -149,12 +113,5 @@
 
   .welcome button {
     width: 20vw;
-  }
-
-  .settings-container {
-    width: 95vw;
-  }
-  .settings-container .user-settings {
-    width: 90vw;
   }
 }

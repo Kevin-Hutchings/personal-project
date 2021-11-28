@@ -1,0 +1,121 @@
+@use "../abstracts/" as *;
+
+.settings-container {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+
+  .user-settings {
+    margin: 3vh auto;
+    height: 40vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $primary-color;
+    border: $border-main;
+    border-radius: 25px 10px;
+  }
+
+  .input-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 22vw;
+    height: 15vh;
+    padding: 1%;
+    border-bottom: $border-main;
+
+    .email-buttons {
+      display: flex;
+      justify-content: space-evenly;
+      width: 15vw;
+
+      button {
+        height: 4vh;
+        width: 6vw;
+      }
+
+      button:active {
+        background-color: $secondary-color;
+        color: white;
+      }
+    }
+
+    input {
+      height: 4vh;
+      width: 15vw;
+      border: $border-main;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .delete-account {
+    button:active {
+      background-color: red;
+      color: white;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .settings-container {
+    width: 70vw;
+
+    .user-settings {
+      width: 65vw;
+      height: 40vh;
+    }
+
+    .input-container {
+      width: 60vw;
+      height: 15vh;
+
+      input {
+        width: 43vw;
+      }
+
+      .email-buttons {
+        width: 40vw;
+
+        button {
+          width: 15vw;
+          height: 5vh;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .settings-container {
+    width: 90vw;
+
+    .user-settings {
+      width: 85vw;
+    }
+
+    .input-container {
+      width: 75vw;
+      height: 15vh;
+
+      input {
+        width: 55vw;
+      }
+
+      .email-buttons {
+        width: 55vw;
+
+        button {
+          width: 20vw;
+          height: 5vh;
+        }
+      }
+    }
+  }
+}

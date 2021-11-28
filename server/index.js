@@ -14,6 +14,7 @@ const {
   getUser,
   deleteUser,
   updateEmail,
+  removeEmail,
 } = require("./controllers/auth");
 const {
   addTitle,
@@ -36,7 +37,8 @@ app.use(
     secret: SESSION_SECRET,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24, //duration = 1 day
-      sameSite: 'none',
+      sameSite: "none",
+      secure: true,
     },
   })
 );
@@ -61,6 +63,7 @@ app.post("/api/auth/register", register);
 app.post("/api/auth/login", login);
 app.get("/api/auth/me", getUser);
 app.put("/api/auth/update/:id", updateEmail);
+app.put("/api/auth/update/:id", removeEmail);
 app.post("/api/auth/logout", logout);
 app.delete("/api/auth/destroy/:id", deleteUser);
 

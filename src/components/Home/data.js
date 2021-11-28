@@ -9,7 +9,7 @@ export const homeData = [
   {
     title: "Tech Stack",
     content: "Project-Ghibli was made using the following:",
-    content2: "React, NodeJS, Express, Postgres, Axios, SASS/SCSS, ChartJS, and Nodemailer",
+    content2: "React, NodeJS, Express, Postgres, Axios, SASS/SCSS, ChartJS, react-player, react-toastify and Nodemailer",
     content3: "The database and site hosting are both handled by Heroku.",
   },
   {

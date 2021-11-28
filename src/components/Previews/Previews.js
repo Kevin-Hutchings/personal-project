@@ -12,13 +12,18 @@ const urls = [
 const playerMap = urls.map((url, index) => {
   return (
     <div>
-    <div className="player">
-      <ReactPlayer url={url} controls={true} key={index} />
-    </div>
-    <div className="player-mobile">
-      <ReactPlayer url={url} controls={true} key={index} width="90vw" height="35vh"/>
-    </div>
-
+      <div className="player">
+        <ReactPlayer url={url} controls={true} key={index} />
+      </div>
+      <div className="player-mobile">
+        <ReactPlayer
+          url={url}
+          controls={true}
+          width="95vw"
+          height="35vh"
+          key={index}
+        />
+      </div>
     </div>
   );
 });
@@ -26,7 +31,7 @@ const playerMap = urls.map((url, index) => {
 const Previews = () => {
   return (
     <div>
-      {/* <h1 className="Previews">TEST COMPONENT PLEASE IGNORE</h1> */}
+      <h1>Movie Previews</h1>
       <div className="player-container">{playerMap}</div>
     </div>
   );
